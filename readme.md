@@ -1,5 +1,5 @@
 <a href="https://www.t-systems.com/br/pt">
-    <img src="./assets/logo-t-systems-magenta.svg-data.svg"  width="250">
+    <img src="./assets/logo-t-systems-magenta.svg-data.svg"  width="100">
 </a>
 
 "Aula dada é aula estudada HOJE!" (Pierluigi Piazzi)
@@ -89,10 +89,6 @@
 
 
 ---
-## Ferramentas (Setup) 
-
-
-
 
 ## Links úteis 
 
