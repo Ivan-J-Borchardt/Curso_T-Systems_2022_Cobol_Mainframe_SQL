@@ -95,7 +95,8 @@
  
 [![WhatsApp](https://img.shields.io/badge/Grupo-WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/EBs5BBL2dJM1wA9lQSrtuZ)
 
-Planilha Entrega de Exercícios: 
+- Planilha Entrega de Exercícios:   
+    https://docs.google.com/spreadsheets/d/18qYnt0rEDGBvcUCXM4h5uLdnJuT7ryNZ8Os2Gk5H_90/edit?usp=sharing 
         
 --- 
 
