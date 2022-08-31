@@ -1,6 +1,6 @@
-# Git e GitHub
+# Git e Bitbucket
 ## Fluxo 
-1. Criar Repositório remoto no GitHub 
+1. Criar Repositório remoto no Bitbucket
 2. Clonar o repositório remoto (Branch Master/main)
 3. Trabalhar/Desenvolver o projeto 
 4. Git add 

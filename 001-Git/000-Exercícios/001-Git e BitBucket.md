@@ -24,9 +24,9 @@
 
 5. Clone o repositório para sua máquina, criando assim um repositório local. 
 
-6. No diretório raiz do projeto, crie um arquivo chamado Understanding_DEV_COBOL.md.
+6. No diretório raiz do projeto, crie um arquivo chamado Understanding_DEV_COBOL.docx.
 
-7. Usando Markdown, edite o arquivo Understanding_DEV_COBOL.md, inserindo suas anotações da aula de Git e BitBucket. 
+7. Edite o arquivo Understanding_DEV_COBOL.docx, inserindo suas anotações da aula de Git e BitBucket. 
 
     **Dica:** Conside que você esteja criando um manual para outras pessoas... 
 
