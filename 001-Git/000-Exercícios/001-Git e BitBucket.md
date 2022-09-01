@@ -9,7 +9,7 @@
 - Git, Bitbucket, repositório local, repositório remoto, markdown. 
 
 ---
-### Instruções Adicionais 
+### Instruções Adicionais
 - O documento 
 
 --- 
