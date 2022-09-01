@@ -25,7 +25,9 @@ Sub-Cabeçalho          <h2>Sub-Cabeçalho</h2>
 
 ### Parágrafos 
 
-Parágrafos são separados por uma linha em branco.  
+
+
+Parágrafos são separados por uma linha em branco.    
 <p>Parágrafos são separados por uma linha em branco. </p>
 
 Dois espaços no fim de uma linha produzem  
@@ -43,18 +45,22 @@ _Enfatizado - itálico_
 __Fortemente enfatizado - negrito__   
 <strong>Fortemente enfatizado - negrito</strong>
 
-~~Enfatizado - taxado~~  
+~~Enfatizado - taxado~~ 
 
 
-combinar configurações __*negrito e itálico*__
+combinar configurações **_negrito e itálico_**
 
 
 
 ### Listas Não Ordenadas
 
-- item 1
+- item 1 
 - item 2
    - sub item 
+   - sub item 2
+      - sub sub item...
+   - sub item 3
+
 - item 3
 
 <ul>
@@ -66,6 +72,7 @@ combinar configurações __*negrito e itálico*__
 
 1. item a
 2. item b 
+3. item c
 
 <ol>
     <li>item a</li>
@@ -88,11 +95,17 @@ combinar configurações __*negrito e itálico*__
 
 ### Links
 
+A [T-Systems](www.t-systems.com.br "Site da T-Systems") é uma empresa de software  
+
+[T-Systems](www.t-systems.com.br "Site da T-Systems") 
+
 [texto do Link](http://example.com/ "Propriedade title, opcional")
 
-<a href="http://example.com/" title ="Propriedade title, opcional">Texto do link</a>
+<a href="http://example.com/" title ="Propriedade title, opcional" >Texto do link</a>
 
 ### Imagem 
+
+![Calculadora Windows](/assets/calculadora.png "Foto da Calculadora Win...")
 
 ![Texto da propriedade Alt](/pasta/da/img.jpg "Propriedade title")
 
@@ -122,7 +135,13 @@ isso é um comando javaScript `console.log('exemplo')`
         display "Valor Negativo"
    and-if 
 ```
-
+~~~
+   if var > 0 then 
+        display "Valor positivo"
+   else
+        display "Valor Negativo"
+   and-if 
+~~~
 
 
 ### Linhas divisórias
@@ -133,14 +152,14 @@ isso é um comando javaScript `console.log('exemplo')`
 
 ### Tabelas 
 
-Cod | Nome  | Nota
---- |:-----:|---
-1   |João   |10
-2   |Augusto|7,3
+Cod | Nome  | Nota | Dica 
+--- |:-----:|-----:|----
+1   |João   |10    | XPTO
+2   |Augusto|7,3   | sdf
 
 
 ### Emojis (funciona no git)
 
-:hand:
+:smile:
 
 
