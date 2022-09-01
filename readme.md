@@ -20,10 +20,20 @@
 ## Aulas 
 ### Aula 1 - 2022.08.29 - 4h
 - Abertura do curso 
+
+### Aula 2 - 2022.08.30 - 8h
 - Introdução à Git e Bitbucket 
 - Organização do Curso e Materiais de aula
 
-### Aula 2 - 2022.08.30 - 8h
+### Aula 3 - 2022.08.31 - 12h
+- Introdução à Git e Bitbucket 
+- Exercícios Lista 1 - Git
+
+
+### Aula 4 - 2022.09.01 - 16h
+- MarkDown 
+- Criação do Understanding Document em Markdown
+
 - Introdução à lógica de programação
     - Como o computador surgiu 
     - Entendendo como um computador funciona 
@@ -54,7 +64,10 @@
     #SagaDosComputadores Ep.6
         https://www.youtube.com/watch?v=uByQnP5FsVY
 
-### Aula 3 - 2022.08.31 - 12h
+### Folga  - 2022.09.02
+- Feriado Fundação de Blumenau 
+
+### Aula 5 - 2022.09.05 - 20h
 - Introdução à lógica de programação
     - Lógica de Programação
         - Sequência Lógica
@@ -67,7 +80,7 @@
 #### **Materiais Complementares** - Cursos de Lógica de Programação
     https://www.cursoemvideo.com/
 
-### Aula 4 - 2022.09.01 - 16h 
+### Aula 6 - 2022.09.06 - 24h 
 - Introdução à lógica de programação
     -  Proposições  
         - Conceito formal 
@@ -82,7 +95,10 @@
     - Operadores Relacionais 
     - Operadores Aritméticos 
 
-### Aula 5 - 2022.09.02 - 20h 
+### Folga  - 2022.09.07  
+- Feriado 7 de setembro
+
+### Aula 7 - 2022.09.08 - 28h 
 - Introdução à lógica de programação
     - Precedência dos operadores lógicos 
     - Precedência dos operadores aritméticos
