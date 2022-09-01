@@ -34,5 +34,7 @@
 
 9. Sincronize o repositório local com o repositório remoto. 
 
+10. Crie um novo arquivo Understanding_DEV_COBOL.md, com as anotações da aula e formate usando Markdown. Complemente o UD com os assuntos relativos a Markdown. 
+
 
 
