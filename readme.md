@@ -36,10 +36,7 @@
 
 - Introdução à lógica de programação
     - Como o computador surgiu 
-    - Entendendo como um computador funciona 
-    - O que é Lógica? (noção empírica vs. Conceito Formal) 
-    - Proposições (entendendo o conceito)
-    - Raciocínio de Relacionamento
+
 
 #### **Materiais Complementares** - A história dos computadores - Manual do Mundo 
 
@@ -68,6 +65,11 @@
 - Feriado Fundação de Blumenau 
 
 ### Aula 5 - 2022.09.05 - 20h
+- Entendendo como um computador funciona 
+- O que é Lógica? (noção empírica vs. Conceito Formal) 
+- Proposições (entendendo o conceito)
+- Raciocínio de Relacionamento
+
 - Introdução à lógica de programação
     - Lógica de Programação
         - Sequência Lógica
