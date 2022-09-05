@@ -5,6 +5,10 @@ Faça uma auto-avaliação respondendo ao questionário abaixo. Suas respostas s
 **Instruções:** 
 1. Crie um repositório em seu Bitbucket com o nome "AutoAvaliacao".
 2. Baixe o arquivo Auto Avaliação.md   
+~~~
+    https://bitbucket.org/IBORCHARDT/ts_2022_cobol_mainframe/src/master/Auto%20Avalia%C3%A7%C3%A3o%201.md
+~~~
+
 3. Renomeie o arquivo para "Auto Avaliação 1.md".
 4. Responda o Questionário e suba para seu repositório.  
 
