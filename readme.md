@@ -66,6 +66,8 @@
 
 ### Aula 5 - 2022.09.05 - 20h
 - Entendendo como um computador funciona 
+
+### Aula 6 - 2022.09.06 - 24h 
 - O que é Lógica? (noção empírica vs. Conceito Formal) 
 - Proposições (entendendo o conceito)
 - Raciocínio de Relacionamento
@@ -82,7 +84,12 @@
 #### **Materiais Complementares** - Cursos de Lógica de Programação
     https://www.cursoemvideo.com/
 
-### Aula 6 - 2022.09.06 - 24h 
+
+
+### Folga  - 2022.09.07  
+- Feriado 7 de setembro
+
+### Aula 7 - 2022.09.08 - 28h 
 - Introdução à lógica de programação
     -  Proposições  
         - Conceito formal 
@@ -97,14 +104,13 @@
     - Operadores Relacionais 
     - Operadores Aritméticos 
 
-### Folga  - 2022.09.07  
-- Feriado 7 de setembro
-
-### Aula 7 - 2022.09.08 - 28h 
+### Aula 8 - 2022.09.09 - 32h     
 - Introdução à lógica de programação
     - Precedência dos operadores lógicos 
     - Precedência dos operadores aritméticos
 
+### Aula 9 - 2022.09.12 - 36h 
+- Criando o primeiro programa em portugol 
 
 ---
 
