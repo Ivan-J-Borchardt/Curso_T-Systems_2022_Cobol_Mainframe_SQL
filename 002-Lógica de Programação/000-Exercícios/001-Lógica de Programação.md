@@ -1,7 +1,21 @@
+# Lógica de Programação 
+## Lista de Exercícios 1 
+### Objetivos
+- Compreender na prática os conceitos de sequencia lógica, fluxo do processamento (Entrada - Processamento - Saída) e Algoritmo. 
 
+#### Palavras Chave  
+- Sequência lógica, fluxo do processamento, Algoritmo
+
+---
+### Instruções Adicionais 
+- Resolva os exercícios propostos criando algoritmos usando a forma de representação de sua preferencia (Pseudo-código, Fluxograma, Descritivo) 
+
+--- 
+### Exercícios 
 
 1)	Crie uma sequência lógica para tomar banho.
 
+**R:**
 Inicio 
 - retire a roupa 
 - va pra debaixo do chuveiro
@@ -19,6 +33,7 @@ Fim
 
 2)	Faça um algoritmo para somar dois números e multiplicar o resultado pelo primeiro número.
 
+**R:**
 Inicio 
 - Insira um numero na variavel num1
 - Insira outro numero na variavel num2
@@ -28,6 +43,7 @@ FIm
 
 3)	Descreva com detalhes a sequência lógica para trocar um pneu de um carro.
 
+**R:**
 Inicio 
 - Pegar ferramentas necessárias
 - Pegar macaco mecânico
@@ -55,6 +71,7 @@ Fim
 
 4)	Faça um algoritmo para trocar uma lâmpada. Descreva com detalhes.
 
+**R:**
 Inicio
 - Ver lampada queimada 
 inicio_troca

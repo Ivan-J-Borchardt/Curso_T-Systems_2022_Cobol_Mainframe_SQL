@@ -1,3 +1,19 @@
+# Lógica de Programação 
+## Lista de Exercícios 2 
+### Objetivos
+- Compreender na prática os conceitos de variáveis, sequencia lógica, fluxo do processamento (Entrada - Processamento - Saída. 
+- Criar algoritmos simples capturando elementos da tela (Entrada de dados), efetuar cálculos aritméticos (Processamento) e imprimir os resultados na tela (Saída). 
+- Compreender os operadores aritméticos, e tipagem de dados.   
+- Desenvolver o racíocinio lógico e a habilidade analítica. 
+#### Palavras Chave  
+- Proposições, sequência lógica, fluxo do processamento, veriáveis, operadores aritméticos, tipagem de dados
+
+---
+### Instruções Adicionais 
+- Resolva os exercícios propostos usando VisualG 
+
+--- 
+### Exercícios 
 1. Escreva um programa que pergunte a velocidade de um carro. Caso ultrapasse 80Km/h, exiba uma mensagem dizendo que o usuário foi multado. Nesse caso, exiba o valor da multa, cobrando R$5 por cada Km acima da velocidade permitida.
 
 2. Faça um programa que leia o ano de nascimento de uma pessoa, calcule a idade dela e depois mostre se ela pode ou não votar.
