@@ -11,11 +11,13 @@
 ---
 ### Instruções Adicionais 
 - Resolva os exercícios propostos usando VisualG 
+- Crie um repositório no Bitbucket chamado "Exercicios_Logica_Programacao"
+- Crie uma pasta para cada lista de exercícios...  
 
 --- 
 ### Exercícios 
 
-1. Faça um programa que leia o nome de uma pessoa e mostre uma mensagem   de boasvindas para ela:  
+1. Faça um programa que leia o nome de uma pessoa e mostre uma mensagem de boas vindas para ela:  
 ~~~
     Ex:   
         Qual é o seu nome? João da Silva  
