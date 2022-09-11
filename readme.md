@@ -81,6 +81,9 @@
             - Formas de representar um algoritmo
             - As fases de um algoritmo
 
+- Exercícios - Lista 1 (Criação de um algoritmo, Sequencia Lógica)
+
+
 #### **Materiais Complementares** - Cursos de Lógica de Programação
     https://www.cursoemvideo.com/
 
@@ -104,13 +107,134 @@
     - Operadores Relacionais 
     - Operadores Aritméticos 
 
+
 ### Aula 8 - 2022.09.09 - 32h     
-- Introdução à lógica de programação
-    - Precedência dos operadores lógicos 
-    - Precedência dos operadores aritméticos
+- Criando o primeiro programa em portugol 
+    - Conhecendo o VisualG
+    - Estrutura de um programa no VisualG
+    - Declaração de variáveis e tipos de dados (inteiro, real, booleano, caractere) 
+    - Comandos de entrada e saída (escreva, leia)
+    - Indentação
+- Operações Aritméticas no VisualG 
+    - Adição, Subtração, Multiplicação, Divisão, Resto
+    - Potenciação, Radiciação(pelo inverso da Potenciação)
+    - Cálculo percentual, Regra de 3 
+    - Montando fórmulas (usando mais de uma operação em uma única expressão)  
+- Precedência dos operadores aritméticos
+- Exercícios - Lista 2 (Criando os primeiros programas no VisualG)
 
 ### Aula 9 - 2022.09.12 - 36h 
-- Criando o primeiro programa em portugol 
+- Estruturas de Seleção
+- Operadores Lógicos e expressões lógicas 
+- Precedência dos operadores lógicos  
+- Exercícios - Lista 3 (Programas com estruturas de Seleção no VisualG)
+- Correção lista 3 
+- Exercícios - Lista 4 (Programas com estruturas de Seleção no VisualG)
+
+### Aula 10 - 2022.09.13 - 40h 
+- Correção Lista 4
+- Resolvendo problemas computacionais
+- Teste de Mesa
+- Estruturas de Repetição
+- Exercícios - Lista 5 (Programas com estruturas de Repetição no VisualG)
+
+### Aula 11 - 2022.09.14 - 44h 
+- Correção Lista 5 
+- Boas práticas e técnicas de produtividade 
+- Exercícios - Lista 6 (Programas com estruturas de Repetição no VisualG)
+
+### Aula 12 - 2022.09.15 - 48h 
+- Correção Lista 6
+- Avaliação - Desafio 1 
+
+### Aula 13 - 2022.09.16 - 52h 
+- Introdução ao COBOL
+    - Conhecendo o Ambiente de desenvolvimento
+        - O que são Máquinas Virtuais
+        - A IDE NetExpress 
+        - Cobol Microfocus vs. Cobol IBM Mainframe 
+    
+    - Estrutura de um programa COBOL 
+    - Declarando variáveis no cobol (Nível 77 e 01)
+    - Comandos de entrada e saída (display, accept) 
+    - Calculos aritméticos (compute)
+    - Estruturas de seleção  (if/else)
+
+- Exercícios - Lista 3 (Programas com estruturas de Seleção em COBOL)
+
+### Aula 14 - 2022.09.19 - 56h
+- Correção Lista 3
+- Constantes Lógicas (Nível 88)
+- Aprofundando Estruturas de seleção
+    - Estruturas de seleção simples 
+    - Estruturas de seleção compostas 
+    - Estruturas de seleção encadeadas 
+    - Comando Evaluate
+- Exercícios - Lista 4 (Programas com estruturas de Seleção em COBOL)
+
+### Aula 15 - 2022.09.20 - 60h
+- Correção Lista 4 
+- Entendendo melhor os níveis das variáveis (sub-níveis e níveis especiais)
+- Estruturas de repetição (perform until (faça até que))
+- Exercícios - Lista 5 (Programas com estruturas de Repetição em COBOL)
+
+### Aula 16 - 2022.09.21 - 64h
+- Correção Lista 5 
+- Aprofundando estruturas de repetição (perform varying Until (para)) 
+- Exercícios - Lista 6 (Programas com estruturas de Repetição em COBOL)
+
+### Aula 17 - 2022.09.22 - 68h
+- Correção Lista 6
+- Vetores (Tabelas internas)
+- Exercícios - Lista 7 (Programas com Tabelas Internas)
+
+### Aula 18 - 2022.09.23 - 72h
+- Correção Lista 7
+- Programação Estruturada 
+    - Sections e Labels 
+    - GO TO vs. Procedimentos 
+
+
+### Aula 19 - 2022.09.26 - 76h
+- Aprofundando Tabelas Internas 
+    - Indexed By 
+    - Matrizes
+    - Métodos de Ordenação 
+
+### Aula 20 - 2022.09.27 - 80h  
+- Avaliação - Desafio 2
+
+### Aula 21 - 2022.09.28 - 84h  
+**Inicio oficial COBOL de acordo com a Ementa**  
+- Variáveis
+    - comp e comp-3
+    - Filler, Low-Values, High-Values e Zeros 
+
+- Cálculos aritméticos 
+    - ADD
+    - Subtract 
+    - Multiplay
+    - Divide 
+
+### Aula 22 - 2022.09.29 - 88h
+- Variáveis 
+    - Máscaras 
+
+- Tratamento de dados alfanuméricos 
+    - Comando Inspect 
+    - Comando String 
+    - Comando Unstring 
+
+- Funções Intrinsecas
+    - Upper-Case
+    - Lower-Case
+    - Trim 
+    - Char
+
+### Aula 23 - 2022.09.30 - 92h
+- Perform times 
+- Screen Section 
+- Comando Copy 
 
 ---
 
