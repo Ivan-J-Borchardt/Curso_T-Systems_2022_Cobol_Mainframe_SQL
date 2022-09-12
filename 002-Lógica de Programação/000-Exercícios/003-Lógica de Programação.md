@@ -43,10 +43,10 @@
 
 9. Crie um programa para calcular a área das formas geométricas básicas:  
 a.	Círculo (pedir o raio);  
-b.	Retângulo (pedir o tamanho os lados);  
+b.	Retângulo (pedir a base e altura);  
 c.	Triangulo retângulo (pedir a base e altura);  
 d.	Triangulo Equilátero: pedir o lado.
-- O usuário deve poder escolher a forma geométrica que deseja calcular a partir de um menu (radio button, por exemplo). O programa, por sua vez, deverá exibir os lables, caixas de digitação e demais textos explicativos correspondentes a opcão escolhida.  
+- O usuário deve poder escolher a forma geométrica que deseja calcular a partir de um menu.   
 
 10. Crie um programa para autenticação de usuários.
 
@@ -54,9 +54,9 @@ d.	Triangulo Equilátero: pedir o lado.
 
 |  userId   |    senha    |
 |-----------|:-----------:|
-| E21Aluno1 |  Trocar123  |
-| E21Aluno2 |  Senha@123  |
-| E21Aluno3 |  123Trocar  |
+| Aluno1    |  Trocar123  |
+| Aluno2    |  Senha@123  |
+| Aluno3    |  123Trocar  |
 
 - Regras
 -   Se o usuário informar o userId e senha corretamente o sistema deverá exibir a mensagem: 
