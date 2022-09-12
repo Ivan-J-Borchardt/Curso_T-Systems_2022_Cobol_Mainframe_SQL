@@ -49,10 +49,10 @@
 ~~~
     Ex:
         Entrada:
-            Nota 1: 4.5
-            Nota 2: 8.5
+            Nota 1: 4.5   
+            Nota 2: 8.5   
         Saída:
-            A média entre 4.5 e 8.5 é igual a 6.5
+            A média entre 4.5 e 8.5 é igual a 6.5 
 ~~~
 
 5. Faça um programa que leia um número inteiro e mostre o seu antecessor e seu sucessor.
@@ -90,7 +90,21 @@
 
 8.  Faça um algoritmo que leia quanto dinheiro uma pessoa tem na carteira (em R$) e mostre quantos dólares ela pode comprar. Considere US$1,00 = R$3,45.
 
+                        1,00 USD - 3,45 R$
+                          x        100
+                          
+                          100 = 3,45x 
+                          x = 100/3.45
+                         dolares = valorCarteira/cotacao
+
 
 9.  Faça um algoritmo que leia a largura e altura de uma parede, calcule e mostre a área a ser pintada e a quantidade de tinta necessária para o serviço, sabendo que cada litro de tinta pinta uma área de 2 metros quadrados.
 
+       
+
+
+
 10. Crie um programa que leia o preço de um produto, calcule e mostre o seu PREÇO PROMOCIONAL, com 5% de desconto.
+
+        desconto  = preco * 0.05 
+        precoPromocional = preco - desconto

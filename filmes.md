@@ -25,6 +25,10 @@ https://www.youtube.com/watch?v=1w-1XMmMdHc
 
 https://www.youtube.com/watch?v=uMxPhSs_1O4 
 
+## FIQUE MAIS INTELIGENTE | 3 Hábitos comprovados pela CIÊNCIA para MEMÓRIA 
+
+https://www.youtube.com/watch?app=desktop&v=wBqqg0hujw4
+
 ## Como mudar hábitos e deixar de adiar obrigações? - Leandro Karnal
 
 https://www.youtube.com/watch?v=UZKNwP1YWBU
