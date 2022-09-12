@@ -33,7 +33,7 @@ Inicio
     se num1 = num2 entao
        escreval("Num1 é igual a num2")
     senao
-       escreva("Num1 é diferente de num2")
+       escreval("Num1 é diferente de num2")
     fimse
     
    //Operadores relacionais
@@ -59,9 +59,16 @@ Inicio
    fimse
    
    
+   //Estruturas de seleção compostas
+   se  (num1 = 23) ou (num2 = 24) entao
+      escreval("Entrou no Se...")
+   fimse
    
-   se  num1 = 23 ou num2 = 24 entao
-      escreva("Entrou no Se...")
+   //Estrutura de seleção encadeada
+   se num1 > 23 entao
+      se num1 = 24 entao
+         escreval("Entrou pq o num1 é igual a 24...")
+      fimse
    fimse
 
 Fimalgoritmo
