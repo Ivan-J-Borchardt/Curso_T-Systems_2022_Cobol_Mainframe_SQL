@@ -22,7 +22,7 @@
 3. Elabore um algoritmo para Entrar com um número e imprimir uma das mensagens: 
  	maior do que 20, igual a 20 ou menor do que 20.
 
-4. Entrar com um número e verificar se o mesmo está no intervalo entre 30 e 90. 
+4. Entrar com um número e verificar se o mesmo está no intervalo entre 30 e 90, inclusive. 
 
 5. Elabore um algoritmo para entrar com três números e imprimi-los em ordem decrescente (suponha números diferentes). 
 
