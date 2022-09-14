@@ -28,6 +28,20 @@
 
 6. Construa uma calculadora. O programa deverá receber 2 números e o caractere equivalente a um dos operadores aritméticos. Efetuar a operação aritmética correspondente e apresentar o resultado. 
 
+
+    Entradas: num1, num2, (+, -, *, /)
+    Processamento: 
+        Receber dois numeros e a operacao desejada 
+        Idenficar a operacao 
+        Efetuar a operaco correspondente com os dois numeros recebidos na entrada 
+        Salvar o resultado 
+        Exibir resultado 
+    Saida: Resultado da op. Aritmética 
+
+
+
+
+
 7. Entrar com o salário de uma pessoa e imprimir o Salário Líquido, segundo a tabela a seguir:
    
 |  Salário Bruto                                   |   INSS   |
@@ -39,7 +53,25 @@
 
 - O salário líquido é igual ao Salário Bruto menos o desconto de INSS. 
 
+
+
+Receber salarioBruto 
+descobrir qual é o desconto 
+ -  até 600, desconto = 0 
+ -  acima de 600 até 1200, desconto = salarioBruto * 0.25
+ -  acima de 1200 até 2000, desconto = salarioBruto * 0.30
+ -  acima de 2000, desconto = salarioBruto * 0.35
+
+Calcular o salario liquido: salarioLiquido = salarioBruto - descontos 
+Exibir salarioLiquido 
+
+
+
+
+
 8.	Um comerciante comprou um produto e quer vende-lo com um lucro de 50% se o valor da compra for menor que R$ 20,00. Caso contrário, o lucro será de 35%. Entrar com o valor do produto e imprimir o valor de venda.
+
+
 
 9. Crie um programa para calcular a área das formas geométricas básicas:  
 a.	Círculo (pedir o raio);  
