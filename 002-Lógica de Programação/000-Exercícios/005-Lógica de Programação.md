@@ -47,5 +47,4 @@ Contagem: 3 5 7 9 Acabou!
 
 10. Crie um programa que leia os valores inicial e final de um intervalo e imprima todos os valores impares ou pares contidos no intervalo. 
 - O usuário deve poder escolher entre impares e pares.  
-- Mostre o resultado na tela (não no console.log).
-- Mostre também quantos números da sequencia são pares e quantos são impares. 
+ 
