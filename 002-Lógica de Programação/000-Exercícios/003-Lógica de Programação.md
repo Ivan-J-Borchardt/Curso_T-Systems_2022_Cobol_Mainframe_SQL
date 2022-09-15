@@ -80,6 +80,16 @@ c.	Triangulo retângulo (pedir a base e altura);
 d.	Triangulo Equilátero: pedir o lado.
 - O usuário deve poder escolher a forma geométrica que deseja calcular a partir de um menu.   
 
+
+a. areaCirculo = 2 * Pi * r
+b. areaRetangulo = base * altura
+c. areaTrianguloRet = (base * altura)/2
+d. areaTrianguloEqu = ((lado * lado) * (3 ^ 1/2))/4
+
+
+ 
+
+
 10. Crie um programa para autenticação de usuários.
 
 - Salve 3 usuários em variáveis pré-inicializadas 

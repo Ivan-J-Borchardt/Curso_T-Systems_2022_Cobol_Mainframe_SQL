@@ -132,22 +132,29 @@
 - Exercícios - Lista 4 (Programas com estruturas de Seleção no VisualG)
 
 ### Aula 10 - 2022.09.13 - 40h 
-- Correção Lista 4
+- Exercícios Lista 4
 - Resolvendo problemas computacionais
 - Teste de Mesa
+
+### Aula 11 - 2022.09.14 - 44h 
+- Exercícios Lista 4
+- Boas práticas e técnicas de produtividade 
+
+
+### Aula 12 - 2022.09.15 - 48h 
+- Correção Lista 4
 - Estruturas de Repetição
 - Exercícios - Lista 5 (Programas com estruturas de Repetição no VisualG)
 
-### Aula 11 - 2022.09.14 - 44h 
-- Correção Lista 5 
-- Boas práticas e técnicas de produtividade 
-- Exercícios - Lista 6 (Programas com estruturas de Repetição no VisualG)
-
-### Aula 12 - 2022.09.15 - 48h 
-- Correção Lista 6
-- Avaliação - Desafio 1 
 
 ### Aula 13 - 2022.09.16 - 52h 
+- Correção Lista 5 
+- Exercícios - Lista 6 (Programas com estruturas de Repetição no VisualG)
+- Correção Lista 6
+
+- Avaliação - Desafio 1 
+
+
 - Introdução ao COBOL
     - Conhecendo o Ambiente de desenvolvimento
         - O que são Máquinas Virtuais
