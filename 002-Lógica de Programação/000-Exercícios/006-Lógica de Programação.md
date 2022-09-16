@@ -25,8 +25,10 @@ a) Quais foram os números sorteados
 b) Quantos números estão acima de 5  
 c) Quantos números são divisíveis por 3  
 
+---------------> num := randi(11)
+
 4. Faça um programa que mostre os 10 primeiros elementos da Sequência de Fibonacci:  
-1 1 2 3 5 8 13 21...
+0 1 1 2 3 5 8 13 21...
 
 5. Crie um aplicativo que leia o preço de 'n' produtos. No final, mostre na tela qual foi o maior e qual foi o menor preço digitados.
 
@@ -55,4 +57,6 @@ d) Qual foi a maior idade lida
 
 10. Elaborar um programa para a casa de câmbio que receba as cotações do dia e efetue a conversão de uma moeda para outra. O programa deverá permitir conversões entre Real, Dólar Americano, Euro, Libra Esterlina e Dólar Canadense. 
 - O usuário pode selecionar o tipo de moeda de entrada e selecionar o tipo para o qual ele deseja converter.
+
+--------> entra -- Dolar -- Destino 
 

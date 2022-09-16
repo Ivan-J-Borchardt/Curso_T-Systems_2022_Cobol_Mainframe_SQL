@@ -64,12 +64,67 @@ saida
 - Homens ganham 5% de desconto
 - Mulheres ganham 13% de desconto
 
+Entradas 
+    nome : caractere
+    sexo : caractere 
+    valorCompra : real 
+
+Processamento
+
+     se sexo = "f" 
+        desconto = 13%
+
+     se sexo = "m"
+        desconto = 5%   
+
+     //      95        =      100          100             5 /100 
+     precoComDesconto = valorCompra - (valorCompra * (desconto/100))
+
+saida     
+    precoComDesconto: real 
+
 
 8. Faça um algoritmo que pergunte a distância que um passageiro deseja percorrer em Km. Calcule o preço da passagem, cobrando R$0.50 por Km para viagens até 200Km e R$0.45 para viagens mais longas.
+
+Entradas
+   distancia
+
+processamento 
+   
+   se distancia > 200 
+      precoPorKm = 0.45
+   senao 
+      precoPorKm = 0.50
+
+   precoPassagem  = distancia * precoPorKm    
+
+Saidas 
+   valorPassagem 
 
 
 9. Crie um programa que leia o tamanho de três segmentos de reta.
 Analise seus comprimentos e diga se é possível formar um triângulo com essas retas. Matematicamente, para três segmentos formarem um triângulo, o comprimento de cada lado deve ser menor que a soma dos outros dois.
+
+Entradas:
+   lado1
+   lado2
+   lado3
+
+Processamento: 
+   se (lado1 < (lado2 + lado3))
+    e (lado2 < (lado1 + lado3))
+    e (lado3 < (lado1 + lado2)) entao 
+       triangulo é possivel 
+    senao 
+       triangulo nao é possivel..
+    fimse 
+
+ 
+
+saida:
+   mensagem informando se é possivel formar um tringulo 
+
+
 
 10. O Índice de Massa Corpórea (IMC) é um valor calculado baseado na altura e no peso de uma pessoa. De acordo com o valor do IMC, podemos classificar o indivíduo dentro de certas faixas.
     - abaixo de 18.5: Abaixo do peso

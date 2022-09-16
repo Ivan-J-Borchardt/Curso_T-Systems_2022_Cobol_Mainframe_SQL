@@ -36,6 +36,14 @@ Contagem: "Inicio 1 2 3 4 5 6 7 ... 75 76 77 Acabou!"
 
 7. Crie um programa que calcule e mostre na tela o resultado da soma entre 6 + 8 + 10 + 12 + 14 + ... + 98 + 100.
 
+
+   a. contar de 6 até 100 
+   b. testar o numero da vez para ver se é divisivel por 2 
+   c. se for divisivel, somar o número em um acumulador 
+
+
+
+
 8. Crie um algoritmo que leia o valor inicial da contagem, o valor final e o incremento, mostrando em seguida todos os valores no intervalo:  
 Exemplo: 
 Digite o primeiro Valor: 3  

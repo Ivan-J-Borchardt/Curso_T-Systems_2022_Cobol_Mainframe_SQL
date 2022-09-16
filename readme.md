@@ -142,18 +142,24 @@
 
 
 ### Aula 12 - 2022.09.15 - 48h 
-- Correção Lista 4
+- Correção Lista 4 (E1 ao E5)
 - Estruturas de Repetição
 - Exercícios - Lista 5 (Programas com estruturas de Repetição no VisualG)
 
 
 ### Aula 13 - 2022.09.16 - 52h 
-- Correção Lista 5 
+- Correção Lista 4 (E5 ao E10)
+- Exercícios Lista 5 
 - Exercícios - Lista 6 (Programas com estruturas de Repetição no VisualG)
-- Correção Lista 6
 
+### Aula 14 - 2022.09.19 - 56h
+
+- Correção Lista 5 
+
+- Correção Lista 6
 - Avaliação - Desafio 1 
 
+### Aula 15 - 2022.09.20 - 60h
 
 - Introdução ao COBOL
     - Conhecendo o Ambiente de desenvolvimento
@@ -169,7 +175,7 @@
 
 - Exercícios - Lista 3 (Programas com estruturas de Seleção em COBOL)
 
-### Aula 14 - 2022.09.19 - 56h
+### Aula 16 - 2022.09.21 - 64h
 - Correção Lista 3
 - Constantes Lógicas (Nível 88)
 - Aprofundando Estruturas de seleção
@@ -179,40 +185,41 @@
     - Comando Evaluate
 - Exercícios - Lista 4 (Programas com estruturas de Seleção em COBOL)
 
-### Aula 15 - 2022.09.20 - 60h
+### Aula 17 - 2022.09.22 - 68h
 - Correção Lista 4 
 - Entendendo melhor os níveis das variáveis (sub-níveis e níveis especiais)
 - Estruturas de repetição (perform until (faça até que))
 - Exercícios - Lista 5 (Programas com estruturas de Repetição em COBOL)
 
-### Aula 16 - 2022.09.21 - 64h
+### Aula 18 - 2022.09.23 - 72h
 - Correção Lista 5 
 - Aprofundando estruturas de repetição (perform varying Until (para)) 
 - Exercícios - Lista 6 (Programas com estruturas de Repetição em COBOL)
 
-### Aula 17 - 2022.09.22 - 68h
+### Aula 19 - 2022.09.26 - 76h
 - Correção Lista 6
 - Vetores (Tabelas internas)
 - Exercícios - Lista 7 (Programas com Tabelas Internas)
 
-### Aula 18 - 2022.09.23 - 72h
+### Aula 20 - 2022.09.27 - 80h
 - Correção Lista 7
 - Programação Estruturada 
     - Sections e Labels 
     - GO TO vs. Procedimentos 
 
 
-### Aula 19 - 2022.09.26 - 76h
+### Aula 21 - 2022.09.28 - 84h
+**Inicio oficial COBOL de acordo com a Ementa** 
 - Aprofundando Tabelas Internas 
     - Indexed By 
     - Matrizes
     - Métodos de Ordenação 
 
-### Aula 20 - 2022.09.27 - 80h  
+### Aula 22 - 2022.09.29 - 88h 
 - Avaliação - Desafio 2
 
-### Aula 21 - 2022.09.28 - 84h  
-**Inicio oficial COBOL de acordo com a Ementa**  
+### Aula 23 - 2022.09.30 - 92h 
+ 
 - Variáveis
     - comp e comp-3
     - Filler, Low-Values, High-Values e Zeros 
@@ -223,7 +230,7 @@
     - Multiplay
     - Divide 
 
-### Aula 22 - 2022.09.29 - 88h
+### Aula 22 - 2022.10.03 - 88h
 - Variáveis 
     - Máscaras 
 
@@ -238,7 +245,7 @@
     - Trim 
     - Char
 
-### Aula 23 - 2022.09.30 - 92h
+### Aula 23 - 2022.10.34 - 92h
 - Perform times 
 - Screen Section 
 - Comando Copy 
