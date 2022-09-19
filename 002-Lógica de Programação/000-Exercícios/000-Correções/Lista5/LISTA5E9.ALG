@@ -7,7 +7,7 @@ Algoritmo "semnome"
 Var
 // Seção de Declarações das variáveis 
 
-   num, fimContagem, paso : inteiro
+   num, fimContagem, incremento : inteiro
 
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc... 
@@ -19,21 +19,14 @@ Inicio
    leia(fimContagem)
    
    escreval("Passo: ")
-   leia(paso)
+   leia(incremento)
    
    escreva("Inicio ")
    
-   se (num <= fimContagem) entao
-      enquanto (num <= fimContagem) faca
-         escreva(num,  " ")
-         num := num + paso
-      fimenquanto
-   senao
-      enquanto (num >= fimContagem) faca
-         escreva(num,  " ")
-         num := num - paso
-      fimenquanto
-   fimse
+   enquanto (num <= fimContagem) faca
+      escreva(num,  " ")
+      num := num + incremento
+   fimenquanto
    
    escreva("Acabou!")
 

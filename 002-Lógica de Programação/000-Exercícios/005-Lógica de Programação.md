@@ -55,4 +55,11 @@ Contagem: 3 5 7 9 Acabou!
 
 10. Crie um programa que leia os valores inicial e final de um intervalo e imprima todos os valores impares ou pares contidos no intervalo. 
 - O usuário deve poder escolher entre impares e pares.  
- 
+
+opcao   ('p' 'i')
+
+se (opcao = 'p')
+   ehPar --- num % 2 = 0 
+senao 
+   ehImpar -- num % 2 <> 0 
+fimse 
