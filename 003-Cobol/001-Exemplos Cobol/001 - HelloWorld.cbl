@@ -1,4 +1,4 @@
-coment*Comentario							coment
+      *Comentario							coment
       *8-11AreaB							aaaaaaa
       *A---12
       *Divisao de identificacao
@@ -13,7 +13,7 @@ coment*Comentario							coment
       *Divisao de configuracao do ambiente
        environment division.
        configuration section.
-	   special-names. decimal-point is comma.
+	    special-names. decimal-point is comma.
 
       *------- Declaracao de recursos externos
        input-output section.
