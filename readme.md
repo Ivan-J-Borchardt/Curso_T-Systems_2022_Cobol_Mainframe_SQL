@@ -175,6 +175,11 @@
 
 - Exercícios - Lista 3 (Programas com estruturas de Seleção em COBOL)
 
+#### **Materiais Complementares** - Cursos de Lógica de Programação
+    https://www.ibmmainframer.com/cobol-tutorial/cobol-introduction/
+    https://www.tutorialbrain.com/mainframe/cobol_home/
+    https://docplayer.com.br/53728416-Cobol-db2-cics-prof-maromo-aula-5.html
+
 ### Aula 16 - 2022.09.21 - 64h
 - Correção Lista 3
 - Constantes Lógicas (Nível 88)
