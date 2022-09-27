@@ -181,7 +181,7 @@
     https://docplayer.com.br/53728416-Cobol-db2-cics-prof-maromo-aula-5.html
 
 ### Aula 16 - 2022.09.21 - 64h
-- Correção Lista 3
+- Correção Lista 3 E1 até E6 
 - Constantes Lógicas (Nível 88)
 - Aprofundando Estruturas de seleção
     - Estruturas de seleção simples 
@@ -191,39 +191,47 @@
 - Exercícios - Lista 4 (Programas com estruturas de Seleção em COBOL)
 
 ### Aula 17 - 2022.09.22 - 68h
-- Correção Lista 4 
 - Entendendo melhor os níveis das variáveis (sub-níveis e níveis especiais)
+- Exercícios - Lista 4 (Programas com estruturas de Seleção em COBOL)
+
+### Aula 18 - 2022.09.23 - 72h
+- Exercícios - Lista 4 (Programas com estruturas de Seleção em COBOL)
+- Calculos aritmeticos (Potenciacao, radiciacao, resto)
+
+
+### Aula 18 - 2022.09.26 - 76h
+- Correção Lista 3 E7 até E10 
 - Estruturas de repetição (perform until (faça até que))
 - Exercícios - Lista 5 (Programas com estruturas de Repetição em COBOL)
 
-### Aula 18 - 2022.09.23 - 72h
-- Correção Lista 5 
+
+### Aula 19 - 2022.09.27 - 80h
+- Correcao Lista 4 e 5 
 - Aprofundando estruturas de repetição (perform varying Until (para)) 
+- Variações dos operadores Relacionais 
 - Exercícios - Lista 6 (Programas com estruturas de Repetição em COBOL)
 
-### Aula 19 - 2022.09.26 - 76h
-- Correção Lista 6
+### Aula 20 - 2022.09.28 - 84h
+**Inicio oficial COBOL de acordo com a Ementa**
+- Correção Lista 6 
 - Vetores (Tabelas internas)
 - Exercícios - Lista 7 (Programas com Tabelas Internas)
-
-### Aula 20 - 2022.09.27 - 80h
-- Correção Lista 7
 - Programação Estruturada 
     - Sections e Labels 
     - GO TO vs. Procedimentos 
 
 
-### Aula 21 - 2022.09.28 - 84h
-**Inicio oficial COBOL de acordo com a Ementa** 
+### Aula 21 - 2022.09.29 - 88h
+
 - Aprofundando Tabelas Internas 
     - Indexed By 
     - Matrizes
     - Métodos de Ordenação 
 
-### Aula 22 - 2022.09.29 - 88h 
+### Aula 22 - 2022.09.30 - 92h 
 - Avaliação - Desafio 2
 
-### Aula 23 - 2022.09.30 - 92h 
+### Aula 23 - 2022.09.03 - 96h 
  
 - Variáveis
     - comp e comp-3
@@ -235,7 +243,7 @@
     - Multiplay
     - Divide 
 
-### Aula 22 - 2022.10.03 - 88h
+### Aula 22 - 2022.10.04 - 100h
 - Variáveis 
     - Máscaras 
 
@@ -250,7 +258,7 @@
     - Trim 
     - Char
 
-### Aula 23 - 2022.10.34 - 92h
+### Aula 23 - 2022.10.05 - 104h
 - Perform times 
 - Screen Section 
 - Comando Copy 

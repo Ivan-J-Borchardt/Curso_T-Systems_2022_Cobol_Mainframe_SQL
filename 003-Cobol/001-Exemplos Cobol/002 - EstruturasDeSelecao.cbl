@@ -85,6 +85,16 @@
 	   display "Numero 2: "
 	   accept wk-num2
 
+      *------- Operadores relacionais
+      *     Igual           =       EQUAL
+      *     Menor que       <       LESS THAN
+      *     Menor ou igual  <=      LESS THAN OR EQUAL TO
+      *     Maior que       >       GREATER THAN
+      *     Maior ou igual  >=      GREATER THAN OR EQUAL TO
+      *     Diferente       <>      NOT EQUAL ou UNEQUAL TO
+
+
+
       *------- Exemplo de Estrutura de selecao EVALUATE
 	   evaluate wk-operacao
 	       when "+"
@@ -142,6 +152,30 @@
 	   else
 	       display "Operacao invalida!"
 	   end-if
+
+      *-----
+           if wk-operacao  = "*" then
+               display "1 Operacao eh multiplicacao..."
+           end-if
+
+           if wk-operacao equals "*" then
+               display "2 Operacao eh multiplicacao..."
+           end-if
+
+           if wk-operacao not equals "*" then
+               display "3 Operacao diferente de  multiplicacao"
+           else
+               display "3 Operacao eh multiplicacao..."
+           end-if
+
+           if wk-operacao unequal to  "*" then
+               display "4 Operacao diferente de  multiplicacao"
+           else
+               display "4 Operacao eh multiplicacao..."
+           end-if
+
+
+
 
 
 

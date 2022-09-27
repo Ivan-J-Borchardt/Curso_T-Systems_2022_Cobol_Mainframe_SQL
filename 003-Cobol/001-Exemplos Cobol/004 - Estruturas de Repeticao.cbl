@@ -32,6 +32,8 @@
 
        77  wk-menu                        pic x(01).
 
+       77  wk-ind                         pic 9(02).
+
 
        linkage section.
 
@@ -44,8 +46,14 @@
       *Declaracao do corpo do programa
        procedure division.
 
-      *    Estrutura de Repeticao "Faca ate que"
+      *---    Estrutura de Repeticao "Faca ate que"
            perform until wk-num1 > 10
+               display "Numero:  " wk-num1
+               compute wk-num1 = wk-num1 + 1
+           end-perform
+
+           move 0    to    wk-num1
+           perform until wk-num1 greater than 10
                display "Numero:  " wk-num1
                compute wk-num1 = wk-num1 + 1
            end-perform
@@ -57,6 +65,31 @@
                display "Digite s para sair"
                accept wk-menu
            end-perform
+
+      *---    Estrutura de repeticao "Para"     iteracao
+           perform varying wk-ind from 1 by 1 until wk-ind > 20
+               display "Wk-ind: " wk-ind
+           end-perform
+
+      *---- Incremento com passo 2
+           perform varying wk-ind from 9 by 2 until wk-ind > 20
+               display "Wk-ind: " wk-ind
+           end-perform
+
+      *---- Decremento em passo -5
+           perform varying wk-ind from 100 by -5 until wk-ind < 0
+               display "Wk-ind: " wk-ind
+           end-perform
+
+
+      *---- Condicao de para composta
+           perform varying wk-ind from 1 by 1 until wk-ind > 20
+                                                 or wk-menu equal "z"
+               display "Wk-ind: " wk-ind
+               display "Digite z para sair"
+               accept wk-menu
+           end-perform
+
 
 	   stop run.
 
