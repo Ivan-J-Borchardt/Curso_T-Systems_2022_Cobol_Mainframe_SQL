@@ -19,6 +19,8 @@
 
 2. Crie um programa que leia os valores inicial e final de um intervalo e imprima todos os números primos contidos no intervalo. 
 
+1  | 2  3  4  5  6 | 7
+
 
 3. Desenvolva um programa que faça o sorteio de 20 números entre 0 e 10 e mostre na tela:
 a) Quais foram os números sorteados  
