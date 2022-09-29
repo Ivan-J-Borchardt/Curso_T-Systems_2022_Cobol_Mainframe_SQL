@@ -32,7 +32,7 @@
 
        77  wk-menu                        pic x(01).
 
-       77  wk-ind                         pic 9(02).
+       77  wk-ind                         pic s9(03).
 
 
        linkage section.
@@ -82,6 +82,7 @@
            end-perform
 
 
+
       *---- Condicao de para composta
            perform varying wk-ind from 1 by 1 until wk-ind > 20
                                                  or wk-menu equal "z"
@@ -89,6 +90,14 @@
                display "Digite z para sair"
                accept wk-menu
            end-perform
+
+
+      *---- Repita n vezes
+           perform 5 times
+              display "passou aqui..."
+           end-perform
+
+
 
 
 	   stop run.
