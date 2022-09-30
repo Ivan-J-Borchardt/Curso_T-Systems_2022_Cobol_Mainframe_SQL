@@ -34,8 +34,8 @@
 	   05  wk-resultado2		  pic 9(05).
 	   05  wk-resto			  pic 9(02).
 
-
-
+       77  wk-num-rand                    pic 9(02).
+       77  wk-cont-jogadas                pic 9(02) value 0.
 
        linkage section.
 
@@ -59,6 +59,9 @@
 	   compute wk-resultado = wk-num1 ** (1/wk-num2)
 	   display "Resultado 2: " wk-resultado
 
+
+
+
       *	   Divisao pegando o resto, note que a variavel wk-resultado2
       *	   precisa ser um numero inteiro
 	   divide wk-num1 by wk-num2
@@ -67,6 +70,27 @@
 
 	   display "Resultado 3: " wk-resultado2
 	   display "Resto     3: " wk-resto
+
+
+
+      *    Incremento
+      *    compute wk-cont-jogadas  = wk-cont-jogadas + 1
+           add 1 to wk-cont-jogadas
+
+
+
+
+
+
+      *    Numeros randomicos
+           perform 10 times
+
+               compute wk-num-rand = function random() * 10
+
+               display "Num Rand.: " wk-num-rand
+           end-perform
+
+
 
 	   stop run.
 
