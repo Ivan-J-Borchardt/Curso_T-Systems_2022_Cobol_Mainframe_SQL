@@ -35,7 +35,7 @@
 	   05  wk-resto			  pic 9(02).
 
        77  wk-num-rand                    pic 9(02).
-       77  wk-cont-jogadas                pic 9(02) value 0.
+       77  wk-cont-jogadas                pic 9(02) value 2.
 
        linkage section.
 
@@ -72,13 +72,25 @@
 	   display "Resto     3: " wk-resto
 
 
-
+           display "Antes Add :"  wk-cont-jogadas
       *    Incremento
       *    compute wk-cont-jogadas  = wk-cont-jogadas + 1
            add 1 to wk-cont-jogadas
 
+           display "Apos Add :"  wk-cont-jogadas
 
 
+      *    Decremento/ Subtracao
+      *    compute wk-cont-jogadas  = wk-cont-jogadas - 1
+           subtract 1 from wk-cont-jogadas
+
+           display "Apos Subtract :"  wk-cont-jogadas
+
+      *    Multiplicacao
+      *    compute wk-cont-jogadas  = wk-cont-jogadas * 3
+           multiply wk-cont-jogadas by 3  giving wk-cont-jogadas
+
+           display "Apos Multiply :"  wk-cont-jogadas
 
 
 

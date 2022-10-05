@@ -239,7 +239,7 @@
 
 - Cálculos aritméticos 
     - ADD
-    - Subtract 
+    - Subtract   
     - Multiplay
     - Divide 
 

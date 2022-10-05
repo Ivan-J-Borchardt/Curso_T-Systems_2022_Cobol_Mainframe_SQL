@@ -42,7 +42,7 @@ Contagem: "Inicio 1 2 3 4 5 6 7 ... 75 76 77 Acabou!"
    c. se for divisivel, somar o número em um acumulador 
 
 
-
+"
 
 8. Crie um algoritmo que leia o valor inicial da contagem, o valor final e o incremento, mostrando em seguida todos os valores no intervalo:  
 Exemplo: 

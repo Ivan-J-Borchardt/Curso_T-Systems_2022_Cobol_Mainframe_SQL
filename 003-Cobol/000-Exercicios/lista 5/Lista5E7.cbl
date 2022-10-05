@@ -28,8 +28,8 @@
        working-storage section.
 
       *Variavel alfanumerica de 25 caracteres
-       77  wk-num                     pic  9(03) value 6.
-       77  wk-resultado               pic  9(05).
+       77  wk-num                     pic  9(03).
+       77  wk-resultado               pic  9(05) value 0.
 
 
 
@@ -47,8 +47,13 @@
 
 
            perform varying wk-num from 6 by 2 until wk-num > 100
-               display wk-num
+
+      *        compute wk-resultado = wk-resultado + wk-num
+               add  wk-num  to  wk-resultado
+
            end-perform
+
+           display "wk-resultado " wk-resultado
 
 
 
