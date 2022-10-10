@@ -14,7 +14,7 @@
 ---
 ### Exercícios 
 1. Faça um algoritmo que leia a nota de 10 alunos de uma turma e guarde-as em um vetor. No final, mostre:  
-a) Qual é a média da turma   
+a) Qual e a media da turma   
        somar todas as notas 
        descobrir quantas notas estao cadastradas
        calcular a media 

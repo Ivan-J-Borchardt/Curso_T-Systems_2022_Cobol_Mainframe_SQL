@@ -213,28 +213,20 @@
 
 ### Aula 20 - 2022.09.28 - 84h
 **Inicio oficial COBOL de acordo com a Ementa**
-- Correção Lista 6 
-- Vetores (Tabelas internas)
-- Exercícios - Lista 7 (Programas com Tabelas Internas)
-- Programação Estruturada 
-    - Sections e Labels 
-    - GO TO vs. Procedimentos 
+- Lista 6 
+- Perform times 
 
 
 ### Aula 21 - 2022.09.29 - 88h
+- Lista 6 
 
-- Aprofundando Tabelas Internas 
-    - Indexed By 
-    - Matrizes
-    - Métodos de Ordenação 
 
 ### Aula 22 - 2022.09.30 - 92h 
-- Avaliação - Desafio 2
+- Lista 6 
 
 ### Aula 23 - 2022.09.03 - 96h 
  
 - Variáveis
-    - comp e comp-3
     - Filler, Low-Values, High-Values e Zeros 
 
 - Cálculos aritméticos 
@@ -244,6 +236,31 @@
     - Divide 
 
 ### Aula 22 - 2022.10.04 - 100h
+- Correção Lista 6 
+
+### Aula 23 - 2022.10.05 - 104h
+- Vetores (Tabelas internas)
+- Exercícios - Lista 7 (Programas com Tabelas Internas)
+
+
+
+### Aula 24 - 2022.10.06 - 108h
+- Prova Cobol 
+
+
+
+### Aula 25 - 2022.10.07 - 112h
+- Programação Estruturada 
+    - Sections e Labels 
+    - GO TO vs. Procedimentos 
+
+
+### Aula 26 - 2022.10.10 - 116h
+ Aprofundando Tabelas Internas 
+    - Indexed By 
+    - Matrizes
+    - Métodos de Ordenação 
+
 - Variáveis 
     - Máscaras 
 
@@ -258,10 +275,16 @@
     - Trim 
     - Char
 
-### Aula 23 - 2022.10.05 - 104h
-- Perform times 
+
+### Aula 27 - 2022.10.11 - 120h
 - Screen Section 
 - Comando Copy 
+- comp e comp-3
+
+
+### Feriado - 2022.10.12
+
+### Aula 28 - 2022.10.11 - 124h
 
 ---
 
