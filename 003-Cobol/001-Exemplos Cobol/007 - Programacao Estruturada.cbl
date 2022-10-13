@@ -45,15 +45,10 @@
       *Declaracao do corpo do programa
        procedure division.
 
-
            display "Passou Aqui 1" .
-           perform  menu 5 times.
+           perform  menu.
 
            display "Passou Aqui 2"
-
-
-
-
 
            stop run.
 
@@ -62,10 +57,9 @@
        menu-a.
            display "Menu"
            accept wk-menu
-
            .
        menu-z.
            exit.
 
 
-
+           

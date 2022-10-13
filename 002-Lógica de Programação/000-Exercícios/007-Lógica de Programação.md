@@ -40,6 +40,53 @@ d) Em que posições a maior nota aparece
         -   Ordenar em ordem crescente                
         -   Ordenar em ordem decrescente 
 
+              1    2     3     4     5 
+ idade      | 3 |  2  |  5  |  7 |  10  |
+
+ idade-aux |  2  | 
+
+ wk-ind  4  
+
+    77  wk-troca        pic x(01) value "s". 
+        88  wk-nao-trocou   value "n". 
+        88  wk-trocou       value "s". 
+
+Algorito para ordenar em ordem Crescente 
+    perform until wk-nao-trocou
+    
+        set wk-nao-trocou   to   true 
+
+        perform varying wk-ind from 1 by 1 until wk-ind > 4
+
+            if idade(wk-ind) > idade(wk-ind + 1) then
+                move  idade(wk-ind)       to  idade-aux
+                move  idade(wk-ind + 1)   to  idade(wk-ind)
+                move  idade-aux           to  idade(wk-ind + 1)
+                set   wk-trocou           to  true 
+            end-if
+
+        end-perform 
+
+    end-perform 
+
+Algorito para ordenar em ordem Decrescente 
+    perform until wk-nao-trocou
+    
+        set wk-nao-trocou   to   true 
+
+        perform varying wk-ind from 1 by 1 until wk-ind > 4
+
+            if idade(wk-ind) < idade(wk-ind + 1) then
+                move  idade(wk-ind)       to  idade-aux
+                move  idade(wk-ind + 1)   to  idade(wk-ind)
+                move  idade-aux           to  idade(wk-ind + 1)
+                set   wk-trocou           to  true 
+            end-if
+
+        end-perform 
+
+    end-perform 
+
 
 6. Crie um programa para gerenciar as notas dos alunos de uma escola. 
     - Crie um vetor para armazenar o nome dos alunos.
