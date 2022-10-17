@@ -13,7 +13,8 @@
 ---
 ## Backlog 
 
-#### Deadline: 2022.??.??
+#### Deadline: 2022.10.24
+- Desafio do algoritmo de ordenacao pelo método insert-sort 
 
 ---
 
@@ -199,35 +200,35 @@
 - Calculos aritmeticos (Potenciacao, radiciacao, resto)
 
 
-### Aula 18 - 2022.09.26 - 76h
+### Aula 19 - 2022.09.26 - 76h
 - Correção Lista 3 E7 até E10 
 - Estruturas de repetição (perform until (faça até que))
 - Exercícios - Lista 5 (Programas com estruturas de Repetição em COBOL)
 
 
-### Aula 19 - 2022.09.27 - 80h
+### Aula 20 - 2022.09.27 - 80h
 - Correcao Lista 4 e 5 
 - Aprofundando estruturas de repetição (perform varying Until (para)) 
 - Variações dos operadores Relacionais 
 - Exercícios - Lista 6 (Programas com estruturas de Repetição em COBOL)
 
-### Aula 20 - 2022.09.28 - 84h
+### Aula 21 - 2022.09.28 - 84h
 **Inicio oficial COBOL de acordo com a Ementa**
 - Lista 6 
 - Perform times 
 
 
-### Aula 21 - 2022.09.29 - 88h
+### Aula 22 - 2022.09.29 - 88h
 - Lista 6 
 
 
-### Aula 22 - 2022.09.30 - 92h 
+### Aula 23 - 2022.09.30 - 92h 
 - Lista 6 
 
-### Aula 23 - 2022.09.03 - 96h 
+### Aula 24 - 2022.09.03 - 96h 
  
 - Variáveis
-    - Filler, Low-Values, High-Values e Zeros 
+    - Filler e Zeros 
 
 - Cálculos aritméticos 
     - ADD
@@ -235,56 +236,93 @@
     - Multiplay
     - Divide 
 
-### Aula 22 - 2022.10.04 - 100h
+### Aula 25 - 2022.10.04 - 100h
 - Correção Lista 6 
 
-### Aula 23 - 2022.10.05 - 104h
+### Aula 26 - 2022.10.05 - 104h
 - Vetores (Tabelas internas)
 - Exercícios - Lista 7 (Programas com Tabelas Internas)
 
 
 
-### Aula 24 - 2022.10.06 - 108h
+### Aula 27 - 2022.10.06 - 108h
 - Prova Cobol 
 
 
 
-### Aula 25 - 2022.10.07 - 112h
+### Aula 28 - 2022.10.07 - 112h
 - Programação Estruturada 
     - Sections e Labels 
     - GO TO vs. Procedimentos 
 
 
-### Aula 26 - 2022.10.10 - 116h
+### Aula 29 - 2022.10.10 - 116h
  Aprofundando Tabelas Internas 
     - Indexed By 
     - Matrizes
     - Métodos de Ordenação 
 
-- Variáveis 
-    - Máscaras 
 
-- Tratamento de dados alfanuméricos 
-    - Comando Inspect 
-    - Comando String 
-    - Comando Unstring 
-
-- Funções Intrinsecas
-    - Upper-Case
-    - Lower-Case
-    - Trim 
-    - Char
-
-
-### Aula 27 - 2022.10.11 - 120h
-- Screen Section 
-- Comando Copy 
-- comp e comp-3
-
+### Aula 30 - 2022.10.11 - 120h
+- Lista 7
 
 ### Feriado - 2022.10.12
 
-### Aula 28 - 2022.10.11 - 124h
+### Aula 31 - 2022.10.13 - 124h
+- Variáveis 
+    - Máscaras
+- Funções Intrinsecas
+    - Upper-Case
+    - Lower-Case
+- Inspect replacing 
+- Inspect converting 
+
+- Lista 7
+
+### Aula 32 - 2022.10.14 - 128h
+- Pegando data do sistema
+- display erase 
+
+- Lista 7
+
+### Aula 33 - 2022.10.17 - 132h
+- Correção de exercícios 
+
+### Aula 34 - 2022.10.18 - 136h
+- Vetores e Matrizes 
+    - Indexed by
+    - Vetores multi-dimensionais  
+- Tratamento de dados alfanuméricos 
+    - Comando Inspect
+    - Comando String 
+    - Comando Unstring 
+
+### Aula 35 - 2022.10.19 - 140h
+- Screen Section 
+- Comando Copy 
+- comp e comp-3
+- Low-Values, High-Values
+
+### Aula 36 - 2022.10.20 - 144h
+- Sub-Programas (Módulos)
+    - Linkage Section 
+    - Comando Call
+    - Encerrando um subprograma corretamente 
+
+### Aula 37 - 2022.10.21 - 148h
+- Respiro para exercícios 
+
+### Aula 38  a 42 - 2022.10.24  a 2022.10.28 - 152 a 172h
+- Introdução Arquivos 
+
+### Aula 42  a 47 - 2022.10.31  a 2022.11.04 - 176 a 196h
+- Trabalhando com arquivos 
+- Processamento Batch vs. Online 
+- Programas conversacionais vs. Pseudo-Conversacionais
+
+### Aula 47  a ?? - 200h - ??
+- Banco de dados 
+
 
 ---
 
