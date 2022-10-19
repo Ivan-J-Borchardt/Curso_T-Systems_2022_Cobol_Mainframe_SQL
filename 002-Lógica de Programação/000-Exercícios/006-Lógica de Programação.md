@@ -55,7 +55,15 @@ d) Qual foi a maior idade lida
 
     K=C+273
 
-    F=(9*C+160)/5
+    K-273 = C
+
+    F=(9*C+160)/5 
+
+    ((F * 5)-160)/9 = C
+
+    ((F * 5)-160)/9 + 273 = K
+
+    F  = (((K - 273) * 9) + 160)/5
 
     Referências: https://www.infoescola.com/fisica/conversao-de-escalas-termometricas/
 

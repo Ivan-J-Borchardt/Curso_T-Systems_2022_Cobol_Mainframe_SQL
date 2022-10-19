@@ -14,7 +14,10 @@
 ## Backlog 
 
 #### Deadline: 2022.10.24
-- Desafio do algoritmo de ordenacao pelo método insert-sort 
+- Desafio do algoritmo de ordenacao pelo método insert-sort.
+
+- Refazer a prova, agora utilizando todas as tecnicas que estudamos até o momento (Programação estruturada, 
+formatação de valores e Strings, validação dos dados informados pelo usuario, etc).
 
 ---
 

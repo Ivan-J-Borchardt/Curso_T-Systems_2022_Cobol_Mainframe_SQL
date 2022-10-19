@@ -1,0 +1,16 @@
+nome pic x(35) value "Joao                               " 
+msn  pic x(60) value "é bom aluno;                               "
+nota pic x(04) value 75
+
+display "O aluno " nome " " msn " Nota " nota
+
+
+O aluno Joao é bom aluno Nota 7,5 
+
+String "O aluno " delimited by SIZE
+        nome      delimited by SPACE
+        msn       delimited by ";"
+        " Nota "  delimited by SIZE 
+        nota      delimited by SIZE 
+  into  mensagem 
+end-string 
