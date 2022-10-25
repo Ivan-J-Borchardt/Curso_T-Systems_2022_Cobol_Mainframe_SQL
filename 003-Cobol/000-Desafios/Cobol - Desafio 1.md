@@ -24,12 +24,9 @@ onde,
 r: raio  
 
 **Obs.** 
-1.	Desenvolva a solução respeitando as seguintes etapas:  
-    a.	Criação da tela em HTML  
-    b.	Estilização da tela utilizando CSS  
-    c.	Implementação da automação em JavaScript  
+1.	Desenvolva a solução usando Cobol.
 
-2.	O projeto deverá ser versionado com Git e consolidado no repositório remoto Github.  
+2.	O projeto deverá ser versionado com Git e consolidado no repositório remoto Bitbucket.  
 *Não esqueça de commitar periodicamente. Crie Commits que façam sentido e comente os commits adequadamente. 
 
 3.	O cliente gostou tanto do resultado da versão 1, que decidiu expandir as funcionalidades do software. 
