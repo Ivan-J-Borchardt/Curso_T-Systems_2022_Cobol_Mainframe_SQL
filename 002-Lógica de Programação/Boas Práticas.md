@@ -6,6 +6,15 @@
 indentar no momento em que o código está sendo construído, isso, inclusive 
 auxilia nosso cérebro a pensar de forma estruturada. 
 
+
+        move 
+        if then 
+           compute... 
+        else
+
+        end-if 
+
+
 2. Nomes de variáveis, funções, procedimentos e parâmetros
 - Os nomes devem ser precisos e passar logo de cara a ideia central, ou seja, deve ir direto ao ponto; 
 - Não se deve ter medo de nomes grandes. Se a sua função ou parâmetro precisa de um nome extenso para demonstrar o que realmente representa, é o que deve ser feito. 
@@ -16,6 +25,7 @@ auxilia nosso cérebro a pensar de forma estruturada.
 
 4. Prefira um código legível (de fácil leitura) à um código "menos verboso"
 - O código fonte escrito em uma linguagem de programação, é escrito para seres humanos, não para o computador. O compilador se encarregará de traduzir o código para o computador... 
+   
 
 5. Use e Abuse do Ctrl+C Ctrl+V e do auto-complete da IDE
 - Isso ajudará a evitar erros de digitação e aumentará a produtividade.  
