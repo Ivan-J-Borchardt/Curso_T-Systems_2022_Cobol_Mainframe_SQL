@@ -38,7 +38,6 @@
            05  fd-aluno-nome                        pic  x(10).
            05  fd-aluno-serie                       pic  9(02).
            05  fd-aluno-cpf                         pic  x(12).
-           05  fd-aluno-provas   occurs 5           pic  x(10).
 
 
 
@@ -57,7 +56,6 @@
            05  wk-aluno-nome                        pic  x(10).
            05  wk-aluno-serie                       pic  9(02).
            05  wk-aluno-cpf                         pic  x(12).
-           05  wk-aluno-provas   occurs 5           pic  x(10).
 
        77  wk-ind                                   pic  9(04) value 0.
 
@@ -72,14 +70,15 @@
        procedure division.
 
 
-           perform inicializa.
+           perform exemplo-leitura.
+           perform exemplo-escrita.
            perform processamento.
            perform finaliza.
 
       *>------------------------------------------------------------------------
-      *>  Procedimentos de inicialização
+      *>  Lendo o arquivo
       *>------------------------------------------------------------------------
-       inicializa section.
+       exemplo-leitura section.
            open input  arqAlunos
            if wk-fs-arqAlunos <> 0 then
                display "Erro ao abrir Arquivo arqAlunos " wk-fs-arqAlunos
@@ -108,8 +107,43 @@
 
 
            .
-       inicializa-exit.
+       exemplo-leitura-exit.
            exit.
+
+
+
+      *>------------------------------------------------------------------------
+      *>  escrevendo no arquivo
+      *>------------------------------------------------------------------------
+       exemplo-escrita section.
+
+           open output  arqAlunos
+           if wk-fs-arqAlunos <> 0 then
+               display "Erro ao abrir Arquivo arqAlunos " wk-fs-arqAlunos
+           end-if
+
+
+           move "Joana"        to    fd-aluno-nome
+           move 6              to    fd-aluno-serie
+           move "000000000-12" to    fd-aluno-cpf
+
+           write fd-aluno
+           if  wk-fs-arqAlunos <> 0  then
+               display "Erro ao escrever Arquivo arqAlunos " wk-fs-arqAlunos
+           end-if
+
+
+           close arqAlunos
+           if wk-fs-arqAlunos <> 0 then
+               display "Erro ao fechar Arquivo arqAlunos " wk-fs-arqAlunos
+           end-if
+
+
+           .
+       exemplo-escrita-exit.
+           exit.
+
+
 
       *>------------------------------------------------------------------------
       *>  Processamento principal
