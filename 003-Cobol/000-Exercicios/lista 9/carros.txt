@@ -1,1 +1,10 @@
-Volkswagen     gol         2012Audi           A4          2000Volkswagen     fusca       1965Nissan         gt-r        2001Volkswagen     combi       1983ford           ka          2020ford           eco sport   2021Volkswagen     fox         2000chevrolet      camaro      2010hyundai        HB20        2015
+Volkswagen     gol         2012
+Audi           A4          2000
+Volkswagen     fusca       1965
+Nissan         gt-r        2001
+Volkswagen     combi       1983
+ford           ka          2020
+ford           eco sport   2021
+Volkswagen     fox         2000
+chevrolet      camaro      2010
+hyundai        HB20        2015

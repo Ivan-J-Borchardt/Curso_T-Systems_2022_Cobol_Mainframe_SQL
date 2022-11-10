@@ -20,7 +20,7 @@
        file-control.
 
            select arqAlunos assign to "arqAlunos.txt"
-           organization is sequential
+           organization is line sequential
            access mode is sequential
            file status is wk-fs-arqAlunos.
 
@@ -117,15 +117,16 @@
       *>------------------------------------------------------------------------
        exemplo-escrita section.
 
-           open output  arqAlunos
+      *>   open output  arqAlunos
+           open extend  arqAlunos
            if wk-fs-arqAlunos <> 0 then
                display "Erro ao abrir Arquivo arqAlunos " wk-fs-arqAlunos
            end-if
 
 
-           move "Joana"        to    fd-aluno-nome
-           move 6              to    fd-aluno-serie
-           move "000000000-12" to    fd-aluno-cpf
+           move "Henrique"     to    fd-aluno-nome
+           move 7              to    fd-aluno-serie
+           move "000000000-25" to    fd-aluno-cpf
 
            write fd-aluno
            if  wk-fs-arqAlunos <> 0  then
