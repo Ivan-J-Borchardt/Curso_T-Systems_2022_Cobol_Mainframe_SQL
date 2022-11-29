@@ -53,7 +53,6 @@
       ******************************************************************
        a-inicializa section.
        a-inicializa-a.
-
            .
        a-inicializa-z.
            exit.
