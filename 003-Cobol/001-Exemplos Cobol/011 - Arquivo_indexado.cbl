@@ -45,14 +45,17 @@
       *>----Variaveis de trabalho
        working-storage section.
 
-       77 wk-fs-arqAlunos                          pic x(02).
+       77  wk-fs-arqAlunos                          pic x(02).
 
-       01 wk-msn-erro.
-          05 wk-msn-erro-adress                    pic x(04).
-          05 filler                                pic x(03) value " - ".
-          05 wk-msn-erro-cod                       pic x(02).
-          05 filler                                pic x(01) value space.
-          05 wk-msn-erro-text                      pic x(40).
+       77  wk-primeiro-cpf                          pic x(12).
+
+
+       01  wk-msn-erro.
+           05 wk-msn-erro-adress                    pic x(04).
+           05 filler                                pic x(03) value " - ".
+           05 wk-msn-erro-cod                       pic x(02).
+           05 filler                                pic x(01) value space.
+           05 wk-msn-erro-text                      pic x(40).
 
 
        01  wk-tela-aluno.
@@ -196,6 +199,19 @@
                move "Erro ao abrir Arquivo arqAlunos"   to      wk-msn-erro-text
                perform z-finaliza-anormal
            end-if
+
+           read arqAlunos next
+           if   wk-fs-arqAlunos not equal "00"
+           and  wk-fs-arqAlunos not equal "10"  then
+                  move "0001"                              to      wk-msn-erro-adress
+                  move wk-fs-arqAlunos                     to      wk-msn-erro-cod
+                  move "Erro ao Ler Arquivo arqAlunos"     to      wk-msn-erro-text
+                  perform z-finaliza-anormal
+           end-if
+
+           move  fd-aluno-cpf                              to       wk-primeiro-cpf
+
+
 
 
            .
@@ -347,26 +363,31 @@
 
            perform bb-consultar-ind
 
-           perform until wk-voltar
+      *>   resetando o arquivo caso File Status = 23, para reposicionar o ponteiro do arquivo...
+           if wk-fs-arqAlunos equal "23" then
+                perform u-resetar-ponteiro-arquivo
+           end-if
 
+           perform until wk-voltar
                read arqAlunos next
                if   wk-fs-arqAlunos not equal "00"
                and  wk-fs-arqAlunos not equal "10"  then
-                   move "0001"                              to      wk-msn-erro-adress
-                   move wk-fs-arqAlunos                     to      wk-msn-erro-cod
-                   move "Erro ao Ler Arquivo arqAlunos"     to      wk-msn-erro-text
-                   perform z-finaliza-anormal
+                  move "0001"                              to      wk-msn-erro-adress
+                  move wk-fs-arqAlunos                     to      wk-msn-erro-cod
+                  move "Erro ao Ler Arquivo arqAlunos"     to      wk-msn-erro-text
+                  perform z-finaliza-anormal
                else
-                   if   wk-fs-arqAlunos equal "10" then
-                       perform bc-consultar-seq-prev
-                   end-if
+                  if   wk-fs-arqAlunos equal "10" then
+      *>               perform bc-consultar-seq-prev
+                      perform u-resetar-ponteiro-arquivo
+                  else
+                      move  fd-aluno                               to       wk-tela-aluno
+                      display sc-tela-aluno
+                      accept sc-tela-aluno
+                      move space                                   to       wk-msn
+                  end-if
                end-if
 
-               move  fd-aluno                               to       wk-tela-aluno
-               display sc-tela-aluno
-               accept sc-tela-aluno
-
-               move space                                   to       wk-msn
 
            end-perform
            .
@@ -445,13 +466,70 @@
       *>*****************************************************************
        be-alterar section.
        be-alterar-a.
-           continue.
+
+           perform bc-consultar-seq-next
+
+           move wk-tela-aluno   to   fd-aluno
+
+           rewrite fd-aluno
+           if   wk-fs-arqAlunos not equal "00" then
+               move "0001"                               to      wk-msn-erro-adress
+               move wk-fs-arqAlunos                      to      wk-msn-erro-cod
+               move "Erro ao alterar Arquivo arqAlunos"  to      wk-msn-erro-text
+               perform z-finaliza-anormal
+           else
+               string "Cadastro "     delimited by size
+                      wk-aluno-cpf    delimited by size
+                      " alterado com sucesso " delimited by size
+                 into wk-msn
+               end-string
+           end-if
+
+
+
            .
        be-alterar-z.
            exit.
 
 
 
+      *>*****************************************************************
+      *>   Reposiciona o ponteiro do arquivo para o primeiro registro
+      *>*****************************************************************
+       u-resetar-ponteiro-arquivo section.
+       u-resetar-ponteiro-arquivo-a.
+
+           move  wk-primeiro-cpf                               to      fd-aluno-cpf
+           start arqAlunos
+           if   wk-fs-arqAlunos not equal "00" then
+               move "0001"                                     to      wk-msn-erro-adress
+               move wk-fs-arqAlunos                            to      wk-msn-erro-cod
+               move "Erro ao dar Start no Arquivo arqAlunos"   to      wk-msn-erro-text
+               perform z-finaliza-anormal
+           end-if
+
+
+
+      *>   close arqAlunos
+      *>   if   wk-fs-arqAlunos not equal "00" then
+      *>       move "0001"                               to      wk-msn-erro-adress
+      *>       move wk-fs-arqAlunos                      to      wk-msn-erro-cod
+      *>       move "Erro ao fechar Arquivo arqAlunos"   to      wk-msn-erro-text
+      *>       perform z-finaliza-anormal
+      *>   end-if
+
+
+      *>   open i-o arqAlunos
+      *>   if   wk-fs-arqAlunos not equal "00"
+      *>   and  wk-fs-arqAlunos not equal "05" then
+      *>       move "0001"                              to      wk-msn-erro-adress
+      *>       move wk-fs-arqAlunos                     to      wk-msn-erro-cod
+      *>       move "Erro ao abrir Arquivo arqAlunos"   to      wk-msn-erro-text
+      *>       perform z-finaliza-anormal
+      *>   end-if
+           .
+       u-resetar-ponteiro-arquivo-z.
+           exit.
 
 
 
