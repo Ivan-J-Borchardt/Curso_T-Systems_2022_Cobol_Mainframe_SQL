@@ -32,6 +32,8 @@
            05  wk-temp                      pic s9(02).
 
        77  wk-ind                           pic  9(02).
+       77  wk-ind-i                         pic  9(02).
+       77  wk-ind-j                         pic  9(02).
        77  wk-temp-aux                      pic s9(02).
 
        77  wk-algoritmo                     pic  x(02).
@@ -78,7 +80,7 @@
            move 19  to   wk-temp(11)
            move 22  to   wk-temp(12)
            move 25  to   wk-temp(13)
-           move 30  to   wk-temp(14)
+           move 29  to   wk-temp(14)
            move 28  to   wk-temp(15)
            move 27  to   wk-temp(16)
            move 29  to   wk-temp(17)
@@ -177,6 +179,9 @@
 
            end-perform
 
+      ******************************************************************
+      *   Relatorio
+      ******************************************************************
            .
        bb-bubble-sort-decresc-z.
            exit.
@@ -187,19 +192,52 @@
       ******************************************************************
        bc-insert-sort-cresc section.
        bc-insert-sort-cresc-a.
-           continue
+
+           perform varying wk-ind-i from  1 by 1 until wk-ind-i > 30
+
+              set wk-nao-trocou   to   true
+
+              perform varying wk-ind-i
+                       from 1 by 1 until wk-ind-i > 29
+
+
+                 set     wk-trocou        to    true
+
+                 if wk-temp (wk-ind-i) > wk-temp(wk-ind-i + 1) then
+                    move wk-temp(wk-ind-i)     to  wk-temp-aux
+                    move wk-temp(wk-ind-i + 1) to  wk-temp(wk-ind-i)
+                    move wk-temp-aux           to  wk-temp(wk-ind-i + 1)
+
+                 end-if
+
+                 perform varying wk-ind-j from wk-ind-i  by -1
+                                          until wk-ind-j = 1
+                                          or wk-nao-trocou
+
+                    if wk-temp(wk-ind-j) < wk-temp(wk-ind-j - 1)then
+                        move wk-temp(wk-ind-j)    to  wk-temp-aux
+                        move wk-temp(wk-ind-j - 1)to  wk-temp(wk-ind-j)
+                        move wk-temp-aux          to
+                                                   wk-temp(wk-ind-j - 1)
+                        set  wk-trocou         to  true
+                    else
+                        set  wk-nao-trocou   to   true
+
+                    end-if
+                 end-perform
+
+              end-perform
+           end-perform
+
            .
        bc-insert-sort-cresc-z.
            exit.
 
 
-      ******************************************************************
-      *   Relatorio
-      ******************************************************************
        bz-relatorio section.
        bz-relatorio-a.
            perform varying wk-ind from 1 by 1 until wk-ind > 30
-               display wk-ind
+               display "wk-temp " wk-temp(wk-ind)
            end-perform
            .
        bz-relatorio-z.
