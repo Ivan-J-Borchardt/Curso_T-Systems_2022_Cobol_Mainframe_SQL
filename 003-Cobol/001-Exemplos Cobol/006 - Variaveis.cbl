@@ -41,6 +41,36 @@
                10  filler                 value "/".
                10  wk-ano-1               pic x(04) value "2022".
 
+      *Constantes Intrinsecas
+       77  wk-num                         pic 9(03) value 564.
+       77  wk-num3                        pic 9(03) value zeroes.
+
+       01  cont.
+           05 wk-num4                     pic x(03) value high-value.
+           05 wk-num4-red   redefines wk-num4.
+              10 wk-num4-num              pic 9(03).
+
+      *                                                 equivalente a FF FF FF Hexadecimal
+       77  wk-num5                        pic x(03) value high-values.
+       77  wk-num6                        pic x(03) value low-value.
+
+      *                                                 equivalente a 00 00 00 Hexadecimal
+       77  wk-num7                        pic x(03) value low-values.
+
+       77  wk-nome                        pic x(04) value space.
+       77  wk-nome2                       pic x(04) value spaces.
+
+
+      *Compactaçao de variaveis numericas
+
+       77  wk-idade                       pic s9(03) comp value 254.
+
+       77  wk-temperatura                 pic s9(04)V99 comp-3.
+
+
+
+
+
       *variaveis avulsas
        77  wk-num-rand                    pic 9(02).
        77  wk-cont-jogadas                pic 9(02) value 2.

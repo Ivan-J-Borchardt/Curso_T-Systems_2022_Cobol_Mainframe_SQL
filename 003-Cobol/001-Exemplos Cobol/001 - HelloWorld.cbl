@@ -31,6 +31,8 @@
        working-storage section.
 
       *Variavel alfanumerica de 25 caracteres
+       77  wk-char                     pic x(01).
+
        77  wk-nome		       pic x(25).
 
       *Variavel numerica inteiro de 3 digitos
@@ -59,6 +61,9 @@
       *Declaracao do corpo do programa
        procedure division.
 
+           compute wk-char = function ord("A").
+
+           display "wk-char " wk-char
 
 	   display "Ola Melhor Turma de Cobol do Mundo!!!"
 
