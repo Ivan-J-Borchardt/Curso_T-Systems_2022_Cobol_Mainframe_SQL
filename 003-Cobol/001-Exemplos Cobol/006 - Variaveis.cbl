@@ -41,8 +41,10 @@
                10  filler                 value "/".
                10  wk-ano-1               pic x(04) value "2022".
 
-      *Constantes Intrinsecas
        77  wk-num                         pic 9(03) value 564.
+
+
+      *Constantes Intrinsecas
        77  wk-num3                        pic 9(03) value zeroes.
 
        01  cont.
@@ -59,13 +61,6 @@
 
        77  wk-nome                        pic x(04) value space.
        77  wk-nome2                       pic x(04) value spaces.
-
-
-      *Compactaçao de variaveis numericas
-
-       77  wk-idade                       pic s9(03) comp value 254.
-
-       77  wk-temperatura                 pic s9(04)V99 comp-3.
 
 
 
@@ -123,6 +118,34 @@
            05 wk-dia-atual            pic 9(02).
 
 
+      *Declaracao de variaveis numericas
+       01  wk-variaveis.
+           05  wk-real1               pic 9(03)V9(2).
+
+           05  wk-real2               pic 9(03),9(2).
+           05  wk-real3               pic 9(03)V99.
+           05  wk-real4               pic 999V99.
+           05  wk-decp1               pic 9(03)P.
+           05  wk-decp2               pic P9(03).
+
+
+
+      *Compactaçao de variaveis numericas
+      *   Na memoria/arquivos o valor sera tratado de forma hexadecimal
+      *   sendo que cada digito decimal ocupara apenas um nible (meio
+      *   Byte)
+
+      *valor puramente binario (numeros inteiros)
+       77  wk-idade                       pic s9(03) comp value 254.
+      *    na memoria: x"D245"
+
+      *valores decimais
+       77  wk-temperatura                 pic s9(04)V99 comp-3.
+      *    na memoria: x"0012350D"
+
+
+
+
        linkage section.
 
 
@@ -136,48 +159,60 @@
 
 
 
-            display "wk-preco:  " wk-preco
-            display "wk-preco2: " wk-preco2
-            display "wk-preco3: " wk-preco3
+           display "wk-preco:  " wk-preco
+           display "wk-preco2: " wk-preco2
+           display "wk-preco3: " wk-preco3
 
-            move  10000025,45   to     wk-preco4
-            display "wk-preco4: " wk-preco4
-
-
-            move  10000025,45   to     wk-preco5
-            display "wk-preco4: " wk-preco5
-
-            move 12312312312  to wk-cpf
-            display "wk-cpf: "  wk-cpf
+           move  10000025,45   to     wk-preco4
+           display "wk-preco4: " wk-preco4
 
 
-            move "15/07/2022" to  wk-data-numerica
-            compute wk-dia = wk-dia + 1
+           move  10000025,45   to     wk-preco5
+           display "wk-preco4: " wk-preco5
+
+           move 12312312312  to wk-cpf
+           display "wk-cpf: "  wk-cpf
+
+
+           move "15/07/2022" to  wk-data-numerica
+           compute wk-dia = wk-dia + 1
       *     move 07           to  wk-mes
       *     move 2022         to  wk-ano
 
-            display "Data Formatada: " wk-data-formatada
+           display "Data Formatada: " wk-data-formatada
 
       *     Recebendo data do sistema
-            accept wk-data-atual  from date YYYYMMDD
+           accept wk-data-atual  from date YYYYMMDD
 
-            display "wk-data-atual " wk-data-atual
+           display "wk-data-atual " wk-data-atual
 
-            move wk-dia-atual   to   wk-dia
-            move wk-mes-atual   to   wk-mes
-            move wk-ano-atual   to   wk-ano
+           move wk-dia-atual   to   wk-dia
+           move wk-mes-atual   to   wk-mes
+           move wk-ano-atual   to   wk-ano
 
-            display "Data Atual Formatada: "  wk-data-formatada
+           display "Data Atual Formatada: "  wk-data-formatada
 
       *     compute wk-area = wk-pi * 2 * wk-raio
 
-            display "wk-num2 " wk-num2
+           display "wk-num2 " wk-num2
 
       *     display "Data: " wk-data
 
+           move 123,45         to    wk-real1
+                                     wk-real2
+                                     wk-real3
+                                     wk-real4
+                                     wk-decp1
+                                     wk-decp2
 
+           display "wk-real1 9(03)V9(2) " wk-real1
+           display "wk-real2 9(03).9(2) " wk-real2
+           display "wk-real3 9(03)V99   " wk-real3
+           display "wk-real4 999V99     " wk-real4
+           display "wk-decp1 9(03)P     " wk-decp1
+           display "wk-decp2 P9(03)     " wk-decp2
 
-
-
+           compute wk-decp1 = wk-decp1 + 100
+           display wk-decp1
 	   stop run.
 

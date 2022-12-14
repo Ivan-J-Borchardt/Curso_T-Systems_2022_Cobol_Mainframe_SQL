@@ -60,9 +60,11 @@
                10  filler                 value "/".
                10  wk-ano-nasc            pic x(04).
 
+      *    Subscritor
        01  wk-ind                         pic 9(02).
 
-
+      *    Indexador
+       01  wk-estados   pic x(20) occurs 27 indexed by wk-index.
 
 
        linkage section.
@@ -94,7 +96,7 @@
            move "23/02/2001"     to  wk-data-nasc(5).
 
 
-
+      *    Usando Subscritor para acessar a posicao dentro do vetor
            move 6                to  wk-ind.
 
            perform until wk-ind > 10 or wk-sair
@@ -123,8 +125,51 @@
            display "qtd de pessoas cadastradas " wk-ind
 
 
+      *    Usando Indice para acessar a posicao dentro do vetor
+
+           set wk-index to 1.
+
+           move "Santa Catarina2334"     to   wk-estados(wk-index)
+           set wk-index up by 1
+           move "Parana"     to   wk-estados(wk-index)
+
+           display "wk-estados(1) " wk-estados(1)
+
+           perform varying wk-index from 1 by 1 until wk-index > 27
+              display "wk-estados " wk-estados(wk-index)
+           end-perform
+
+      *    Incrementando e decrementando indices
+           set wk-index up by 1
+
+           set wk-index down by 1
+
+      *    dando display do conteudo de wk-ind
+           set wk-ind   to  wk-index
+           display "wk-index " wk-ind
 
 
+
+      *    apesar do vetor possuir um indice declarado, eh possivel usar subscritor
+
+           move 1  to wk-ind
+           display "wk-estados(wk-ind) " wk-estados(wk-ind)
+
+      *    Search
+           set  wk-index to 1
+           search wk-estados varying wk-index
+              at end
+                 display "estado nao cadastrado"
+
+              when wk-estados(wk-index) = "Santa Catarina"
+                 display "Estado Localizado!"
+
+              when wk-estados(wk-index) = "Parana"
+                 display "Estado2  Localizado!"
+
+              when wk-estados(wk-index) = "Sao Paulo"
+                 display "Estado3  Localizado!"
+           end-search
 
 
 	   stop run.

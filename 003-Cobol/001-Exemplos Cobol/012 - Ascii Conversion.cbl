@@ -38,20 +38,22 @@
        77  wk-texto                    pic x(30)
            value "isso eh um texto...".
 
+       77  wk-ind                      pic 9(02).
 
        linkage section.
 
 
        screen section.
 
-      *  ---- ASCII  (Plataforma PC - Baixa Plataforma)
+      *  ---- ASCII  (Plataforma PC - Baixa Plataforma)   256 0-255
       *  ---- EBCDIC (Mainframe     - Alta Plataforma)
 
 
 
       *Declaracao do corpo do programa
        procedure division.
-      *                             "x" != "X"
+
+      *    copy ascii.
            compute wk-ascii = function ord("X").
 
            display "wk-ascii " wk-ascii
@@ -60,10 +62,9 @@
 
            display "wk-char " wk-char
 
-           display "wk-texto parcial " wk-texto(13:1)
-
-
-
+           perform  varying  wk-ind from 1 by 1 until wk-ind > 4999
+               display "wk-texto parcial " wk-texto(wk-ind:1)
+           end-perform
 
 
 	   stop run.
