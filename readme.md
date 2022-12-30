@@ -315,19 +315,260 @@ formatação de valores e Strings, validação dos dados informados pelo usuario
 ### Aula 37 - 2022.10.21 - 148h
 - Respiro para exercícios 
 
-### Aula 38  a 42 - 2022.10.24  a 2022.10.28 - 152 a 172h
-- Introdução Arquivos 
+### Aula 38 - 2022.10.24 - 152h 
+- Introdução a Arquivos 
+- Diferenças entre Arquivos Sequencial, linha-sequencial, relativo, indexado
+- Declaração de um arquivo sequencial (select, FD, FileStatus)
 
-### Aula 42  a 47 - 2022.10.31  a 2022.11.04 - 176 a 196h
-- Trabalhando com arquivos 
-- Processamento Batch vs. Online 
-- Programas conversacionais vs. Pseudo-Conversacionais
+### Aula 39 - 2022.10.25 - 156h
+- Exemplo de Programa com arquivo sequencial 
+- Abertura do arquivo para escrita, Abertura para leitura 
+- Lendo um registro em arquivos sequenciais 
+- Escrevendo em Arquivos sequenciais 
+- Fechamento do Arquivo 
 
-### Aula 47  a ?? - 200h - ??
-- Banco de dados 
+### Aula 40 - 2022.10.26 - 160h
+- Exercícios Arquivos Sequenciais 
 
+### Visita Site - 2022.10.27
+- Visita ao Site de Blumenau 
 
----
+### Aula 41 - 2022.10.28 - 164h
+- Exercícios Arquivos Sequenciais 
+
+### Aula 42 - 2022.10.31 - 168h
+- Exercícios Arquivos Sequenciais 
+
+### Aula 43 - 2022.11.01 - 172h
+- Projeto Arquivos Sequenciais - Tema Livre 
+
+### Feriado - 2022.11.02
+- Feriado 
+
+### Aula 44 - 2022.11.03 - 176h
+- Projeto Arquivos Sequenciais - Tema Livre
+
+### Aula 45 - 2022.11.04 - 180h
+- Projeto Arquivos Sequenciais - Tema Livre
+
+### Aula 46 - 2022.11.07 - 184h
+- Projeto Arquivos Sequenciais - Tema Livre
+
+### Aula 47 - 2022.11.08 - 188h
+- Teoria dos arquivos Relativos 
+- Arquivos Indexados 
+- Leitura Indexada vs. Leitura Sequencial 
+
+### Aula 48 - 2022.11.09 - 192h
+- Arquivos Indexados 
+- Variações na sintaxe do Read e do Write 
+- Melhorias no tratamento de erro e introdução da rotina fim-anormal
+
+### Aula 49 - 2022.11.10 - 196h
+- Arquivos Indexados 
+- Sobre-escrita de registros 
+- Deleção de registros 
+- Algoritmo de leitura de dados 
+
+### Aula 50 - 2022.11.11 - 200h
+- Arquivos Indexados 
+- Continuação Algoritmo de leitura de dados
+
+### Aula 51 - 2022.11.14 - 204h
+- Revisão Arquivos Indexados 
+- Exercícios Arquivos Indexados 
+
+### Aula 52 - 2022.11.15 - 208h
+- Exercícios Arquivos Indexados 
+
+### Aula 53 - 2022.11.16 - 212h
+- Trabalho Arquivos Indexados - Histórico de Temperaturas 
+
+### Aula 54 - 2022.11.17 - 216h
+- Trabalho Arquivos Indexados - Histórico de Temperaturas 
+
+### Aula 55 - 2022.11.18 - 220h
+- Trabalho Arquivos Indexados - Histórico de Temperaturas 
+
+### Aula 56 - 2022.11.21 - 224h
+- Trabalho Arquivos Indexados - Histórico de Temperaturas 
+
+### Aula 57 - 2022.11.22 - 228h
+- Sessão de dúvidas e revisão geral
+- Revisão Trabalho da Pizza e Conclusão de atividades inacabadas
+
+### Aula 58 - 2022.11.23 - 232h
+- Sessão de dúvidas e revisão geral
+- Revisão Trabalho da Pizza e Conclusão de atividades inacabadas
+
+### Aula 59 - 2022.11.24 - 234h **(Jogo do Brasil na copa)**
+- Revisão Trabalho da Pizza e Conclusão de atividades inacabadas
+
+### Aula 60 - 2022.11.25 - 238h
+- Revisão Trabalho da Pizza e Conclusão de atividades inacabadas
+
+### Aula 61 - 2022.11.28 - 240h **(Jogo do Brasil na copa)**
+- Revisão Trabalho da Pizza e Conclusão de atividades inacabadas
+
+### Aula 62 - 2022.11.29 - 244h
+- Revisão Sistemas Numéricos Binário, Octal, Hexadecimal 
+- high-values e Low-values 
+
+### Aula 63 - 2022.11.30 - 248h
+- Revisão constantes intrinsecas, níveis de Variáveis, Constantes e Máscaras 
+- Comp e Comp-3 
+
+### Aula 64 - 2022.12.01 - 252h
+- Revisão Tabela ASCII e EBCDIC 
+- Conversão de valores numéricos (pic x para pic 9)
+- Revisão de redefines 
+
+### Aula 65 - 2022.12.02 - 254h **(Jogo do Brasil na copa)**
+- Função Intrinseca char() e ORD() 
+
+### Aula 66 - 2022.12.05 - 256h **(Jogo do Brasil na copa)**
+- Desafio Cifra de César
+
+### Aula 67 - 2022.12.06 - 260h 
+- Desafio Cifra de César
+
+### Aula 68 - 2022.12.07 - 264h 
+- Desafio Cifra de César
+
+### Aula 69 - 2022.12.08 - 268h 
+- Desafio Cifra de César
+
+### Aula 70 - 2022.12.09 - 270h **(Jogo do Brasil na copa)**
+- Desafio Cifra de César
+
+### Aula 71 - 2022.12.12 - 274h 
+- Subscritores vs. Indexadores
+- Indexed By 
+- Set to, Set Up, Set Down 
+
+### Aula 72 - 2022.12.13 - 278h 
+- Comando Search 
+- Exemplos diversos de declaração de variáveis numéricas 
+
+### Aula 73 - 2022.12.14 - 282h
+- Ordenação de Arquivos (Sort Interno) 
+
+### Aula 74 - 2022.12.15 - 286h
+- Sessão de dúvidas 
+
+### Aula 75 - 2022.12.16 - 290h
+- Introdução Metodologia Ágil 
+- Revisão Git e BitBucket 
+- Start Projeto SRS 
+
+### Aula 76 - 2023.01.02 - 294h
+- Apresentação Resultados e Review do Trabalho SRS 
+- Geração de Evidências de testes 
+
+### Aula 77 - 2023.01.03 - 298h
+- Conceitos Processamento Batch e Online 
+- Programas Conversacionais e Pseudo-Conversacionais 
+- Algoritmo Balance-Line - Arquivos Sequenciais 
+
+### Aula 78 - 2023.01.04 - 302h
+- Exercícios Balance-Line 
+
+### Aula 79 - 2023.01.05 - 306h
+- Introdução a Banco de Dados 
+- Conceitos 
+    - Dados vs. Informação vs. Conhecimento 
+    - O que é um Banco de Dados 
+    - Sistema Gerenciador de Banco de Dados 
+    - Sistema de Banco de Dados 
+    - Abstração de Dados 
+        - Nível Físico  
+        - Nível Conceitual 
+        - Nível de Visão do Usuário 
+
+### Aula 80 - 2023.01.06 - 310h
+- Projeto de Dados 
+    - Modelagem conceitual 
+        - Diagrama Entidade Relacionamento 
+            - Entidade 
+            - Atributo 
+            - Relacionamento e Cardinalidade 
+        
+### Aula 81 - 2023.01.09 - 314h
+- Projeto de Dados 
+    - Modelo Entidade Relacionamento 
+    - Normalização 
+
+### Aula 82 - 2023.01.10 - 318h
+- Exercício - Projeto de um Banco de Dados 
+
+### Aula 83 - 2023.01.11 - 322h
+- Projeto Lógico 
+    - Tipos de SGBD
+        - Hierárquico 
+        - Relacional 
+        - Orientado a Objeto 
+        - Orientado a Documentos
+        - Outros  
+
+- Tabela 
+    - Tuplas
+    - Colunas 
+    - Chave Primária e Estrangeira 
+
+### Aula 84 - 2023.01.12 - 326h
+- SQL - DDL 
+
+### Aula 85 - 2023.01.13 - 330h
+- SQL - DML 
+
+### Aula 86 - 2023.01.16 - 334h
+- SQL - DQL e Cláusulas 
+
+### Aula 87 - 2023.01.17 - 338h
+- SQL - DQL e Cláusulas 
+- Operadores lógicos 
+- Operadores Relacionais 
+
+### Aula 88 - 2023.01.18 - 342h
+- SQL - DCL e DTL 
+- Respiro para exercícios 
+
+### Aula 89 - 2023.01.19 - 346h
+- Respiro para exercícios 
+
+### Aula 90 - 2023.01.20 - 350h
+- Respiro para exercícios 
+
+### Aula 91 - 2023.01.23 - 354h
+- Banco de dados Relacionais no Cobol 
+- Comando Exec SQL 
+
+### Aula 92 - 2023.01.24 - 358h
+- SQL Code 
+- Exemplo Cobol 
+- Exercícios 
+
+### Aula 93 - 2023.01.25 - 362h
+- Funções de Agregação (AVG, COUNT, SUM, MAX, MIN)
+
+### Aula 94 - 2023.01.26 - 366h
+- Respiro para exercícios
+
+### Aula 95 - 2023.01.27 - 370h
+- Respiro para exercícios
+
+### Aula 96 - 2023.01.30 - 374h
+- alias coluna
+- alias tabela 
+- sub-select 
+
+### Aula 97 - 2023.01.31 - 378h
+- Alguns conceitos DB2 
+    - Entendendo o Catálogo 
+    - Cláusula With Ur 
+    - Cláusula for fetch n only 
+    - Entendendo o BIND 
+
 
 ## Links úteis 
 

@@ -48,13 +48,14 @@
            05  fd-aluno-matricula                    pic  x(10).
            05  fd-aluno-nome                         pic  x(25).
            05  fd-aluno-serie                        pic  9(02).
-           05  fd-aluno-cpf                          pic  x(12).
+           05  fd-aluno-cpf                          pic  x(14).
 
        fd arqNotas.
        01  fd-notas.
            05 fd-notas-matricula                     pic  x(10).
            05 fd-notas-disciplina                    pic  x(04).
-           05 fd-notas-nota occurs 15                pic  9(02)v99 comp-3.
+           05 fd-notas-notas.
+              10 fd-notas-nota occurs 15             pic  9(02)v99.
 
        fd arqBoletin.
        01  fd-boletin.
@@ -62,8 +63,9 @@
            05 fd-boletin-nome                        pic  x(25).
            05 fd-boletin-serie                       pic  9(02).
            05 fd-boletin-disciplina                  pic  x(04).
-           05 fd-boletin-nota occurs 15              pic  9(02)v99 comp-3.
-           05 fd-boletin-media                       pic  9(02)v99 comp-3.
+           05 fd-boletin-notas.
+              10 fd-boletin-nota occurs 15           pic  9(02)v99.
+           05 fd-boletin-media                       pic  9(02)v99.
 
       *>----Variaveis de trabalho
        working-storage section.
@@ -75,13 +77,28 @@
 
        77  wk-fs-arqBoletin                           pic x(02).
 
-      *>     Estatisticas
-       77  wk-qtd-alunos-lidos                        pic 9(06) comp.
-       77  wk-qtd-notas-lidos                         pic 9(06) comp.
+      *>   Variaveis de Trabalho dos arquivos
 
-      *>     Mensagem de erro
-       77  wk-msn                                     pic x(60).
+       01  wk-aluno.
+           05  wk-aluno-matricula                    pic  x(10).
+           05  wk-aluno-nome                         pic  x(25).
+           05  wk-aluno-serie                        pic  9(02).
+           05  wk-aluno-cpf                          pic  x(12).
 
+      *>   Subscritores/Indexadores
+       01  wk-ind.
+           05  wk-i-nota                             pic 9(02).
+
+      *>   Estatisticas
+       77  wk-qtd-alunos-lidos                       pic 9(06) comp.
+       77  wk-qtd-notas-lidos                        pic 9(06) comp.
+
+      *>   Mensagem de erro
+       77  wk-msn                                    pic x(60).
+
+      *>   Variaveis auxiliares
+       77  wk-sum-notas                              pic 9(03)v99.
+       77  wk-media-notas                            pic 9(02)v99.
 
       *>----Variaveis para comunicação entre programas
        linkage section.
@@ -234,6 +251,46 @@
            .
        bb-ler-notas-z.
            exit.
+
+      *>*****************************************************************
+      *>   Gravar Arquivo Boletin
+      *>*****************************************************************
+       bc-gravar-boletin section.
+       bc-gravar-boletin-a.
+           move fd-aluno-matricula     to      fd-boletin-matricula
+           move fd-aluno-nome          to      fd-boletin-nome
+           move fd-aluno-serie         to      fd-boletin-serie
+           move fd-notas-disciplina    to      fd-boletin-disciplina
+           move fd-notas-notas         to      fd-boletin-notas
+
+           move zero                   to      wk-sum-notas
+           perform varying wk-i-nota from 1 by 1 until wk-i-nota > 15
+                          or fd-notas-nota(wk-i-nota) = 99,99
+              add fd-notas-nota(wk-i-nota)  to   wk-sum-notas
+           end-perform
+           compute wk-media-notas  =  wk-sum-notas/(wk-i-nota - 1)
+
+
+           move wk-media-notas         to      fd-boletin-media
+
+           write fd-boletin
+           if   wk-fs-arqNotas  not equal "00"  then
+
+              move spaces       to    wk-msn
+              string "Erro gravacao arquivo arqBoletin, File Status: "
+                      wk-fs-arqBoletin   delimited by size
+                into wk-msn
+              end-string
+              perform  z-finaliza-erro
+           end-if
+
+
+
+
+           .
+       bc-gravar-boletin-z.
+           exit.
+
 
 
 

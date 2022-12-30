@@ -1,0 +1,7 @@
+0000000001Grace Murray Hopper      03000.000.000-12
+0000000002George Boole             03000.000.000-35
+0000000003John Von Neumann         05000.000.000-29
+0000000004Alan Turing              08000.000.000-87
+0000000005Ada Lovelace             07000.000.000-99
+0000000006Charles Babbage          08000.000.000-11
+0000000007Steve Wozniak            06000.000.000-15

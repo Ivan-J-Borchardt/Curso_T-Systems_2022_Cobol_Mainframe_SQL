@@ -91,6 +91,7 @@
 
            sort sortAlunos
                on descending key sd-aluno-nome
+               on ascending key sd-aluno-serie
       *>        on ascending key ...
                using arqAlunos
                giving arqAlunos.

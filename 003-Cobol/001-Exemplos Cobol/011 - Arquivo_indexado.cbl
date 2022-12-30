@@ -19,12 +19,15 @@
        input-output section.
        file-control.
 
-           select arqAlunos assign to "arqAlunosInd.txt"
+           select arqAlunos assign to "arqAlunosInd2.txt"
            organization is indexed
            access mode is dynamic
            record key is fd-aluno-cpf
+           alternate key is fd-aluno-serie with duplicates
            file status is wk-fs-arqAlunos.
 
+           select sortAlunos assign to "SortAlunos.txt"
+           sort status is wk-ss-arqAlunos.
 
 
        i-o-control.
@@ -40,12 +43,20 @@
            05  fd-aluno-nome                        pic  x(10).
            05  fd-aluno-serie                       pic  9(02).
 
+       sd sortAlunos.
+       01  sd-aluno.
+           05  sd-aluno-cpf                         pic  x(12).
+           05  sd-aluno-nome                        pic  x(10).
+           05  sd-aluno-serie                       pic  9(02).
 
 
       *>----Variaveis de trabalho
        working-storage section.
 
        77  wk-fs-arqAlunos                          pic x(02).
+
+       77  wk-ss-arqAlunos                          pic x(02).
+
 
        77  wk-primeiro-cpf                          pic x(12).
 
@@ -191,6 +202,21 @@
        a-inicializa section.
        a-inicializa-a.
 
+           sort sortAlunos
+               on ascending key sd-aluno-serie
+      *>        on descending key ...
+               using arqAlunos
+               giving arqAlunos.
+
+           if  wk-ss-arqAlunos not equal '00'
+               move "0001"                              to      wk-msn-erro-adress
+               move wk-ss-arqAlunos                     to      wk-msn-erro-cod
+               move "Erro ao ordenar arquivo arqAlunos"   to      wk-msn-erro-text
+               perform z-finaliza-anormal
+           end-if
+
+
+
            open i-o arqAlunos
            if   wk-fs-arqAlunos not equal "00"
            and  wk-fs-arqAlunos not equal "05" then
@@ -242,7 +268,7 @@
                end-if
 
                if wk-eh-consultar-seq then
-                   perform bc-consultar-seq-next
+                   perform bc-consultar
                end-if
 
                if wk-eh-deletar then
@@ -298,6 +324,7 @@
 
            write fd-aluno   from   wk-tela-aluno
            if   wk-fs-arqAlunos not equal "00"
+           and  wk-fs-arqAlunos not equal "02"
            and  wk-fs-arqAlunos not equal "22" then
                move "0001"                               to      wk-msn-erro-adress
                move wk-fs-arqAlunos                      to      wk-msn-erro-cod
@@ -325,35 +352,60 @@
       *>*****************************************************************
        bb-consultar-ind section.
        bb-consultar-ind-a.
-           initialize wk-tela-aluno
-
-      *>    perform until wk-voltar
+            move wk-aluno-cpf                                 to      fd-aluno-cpf
+            read arqAlunos
+            if   wk-fs-arqAlunos not equal "00" then
+               if   wk-fs-arqAlunos equal "23" then
+                   move "CPF nao cadastrado"                 to      wk-msn
+                else
+                   move "0001"                               to      wk-msn-erro-adress
+                   move wk-fs-arqAlunos                      to      wk-msn-erro-cod
+                   move "Erro ao Ler Arquivo arqAlunos"      to      wk-msn-erro-text
+                   perform z-finaliza-anormal
+               end-if
+            else
+               move fd-aluno                                to       wk-tela-aluno
                display sc-tela-aluno
                accept sc-tela-aluno
 
-               move  space                                       to      wk-msn
-               move wk-aluno-cpf                                 to      fd-aluno-cpf
-               read arqAlunos
-               if   wk-fs-arqAlunos not equal "00" then
-                   if   wk-fs-arqAlunos equal "23" then
-                       move "CPF nao cadastrado"                 to      wk-msn
-                   else
-                       move "0001"                               to      wk-msn-erro-adress
-                       move wk-fs-arqAlunos                      to      wk-msn-erro-cod
-                       move "Erro ao Ler Arquivo arqAlunos"      to      wk-msn-erro-text
-                       perform z-finaliza-anormal
-                   end-if
-               else
-                   move fd-aluno                                to       wk-tela-aluno
-                   display sc-tela-aluno
-                   accept sc-tela-aluno
-
-               end-if
-      *>    end-perform
+            end-if
 
            .
        bb-consultar-ind-z.
            exit.
+
+
+      *>*****************************************************************
+      *>   Rotina de Consulta
+      *>*****************************************************************
+       bc-consultar section.
+       bc-consultar-a.
+           initialize wk-tela-aluno
+
+           display sc-tela-aluno
+           accept sc-tela-aluno
+           move  space                                       to      wk-msn
+
+           if  wk-aluno-cpf  not equal space then
+              perform bb-consultar-ind
+           end-if
+
+           if wk-aluno-serie not equal zero then
+              perform u-posicionar-ponteiro-arquivo
+           end-if
+
+      *>   resetando o arquivo caso File Status = 23, para reposicionar o ponteiro do arquivo...
+           if wk-fs-arqAlunos equal "23" then
+                perform u-resetar-ponteiro-arquivo
+           end-if
+
+           perform bc-consultar-seq-next
+
+           .
+       bc-consultar-z.
+           exit.
+
+
 
       *>*****************************************************************
       *>   Rotina de Consulta Sequencial - do comeco para o final do arq.
@@ -361,12 +413,6 @@
        bc-consultar-seq-next section.
        bc-consultar-seq-next-a.
 
-           perform bb-consultar-ind
-
-      *>   resetando o arquivo caso File Status = 23, para reposicionar o ponteiro do arquivo...
-           if wk-fs-arqAlunos equal "23" then
-                perform u-resetar-ponteiro-arquivo
-           end-if
 
            perform until wk-voltar
                read arqAlunos next
@@ -529,6 +575,24 @@
       *>   end-if
            .
        u-resetar-ponteiro-arquivo-z.
+           exit.
+
+      *>*****************************************************************
+      *>   Reposiciona o ponteiro do arquivo para o primeiro registro da chave alternada
+      *>*****************************************************************
+       u-posicionar-ponteiro-arquivo section.
+       u-posicionar-ponteiro-arquivo-a.
+
+           move  wk-aluno-serie                                to      fd-aluno-serie
+           start arqAlunos
+           if   wk-fs-arqAlunos not equal "00" then
+               move "0001"                                     to      wk-msn-erro-adress
+               move wk-fs-arqAlunos                            to      wk-msn-erro-cod
+               move "Erro ao dar Start no Arquivo arqAlunos"   to      wk-msn-erro-text
+               perform z-finaliza-anormal
+           end-if
+           .
+       u-posicionar-ponteiro-arquivo-z.
            exit.
 
 

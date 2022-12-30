@@ -108,6 +108,16 @@
 
            display wk-nome
 
+      * ---- INITIALIZE
+
+           INITIALIZE wk-nome
+              REPLACING ALPHANUMERIC BY SPACES
+                NUMERIC BY ZEROES
+
+
+
+
+
       * ---- STRING
 
            display wk-nome1  wk-sobrenome-p1  wk-sobrenome-p2
