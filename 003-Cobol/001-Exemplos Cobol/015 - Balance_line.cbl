@@ -19,20 +19,26 @@
        input-output section.
        file-control.
 
-           select arqAlunos assign to "arqAlunosDados.txt"
+           select arq1 assign to "arq1.txt"
            organization is line sequential
            access mode is sequential
-           file status is wk-fs-arqAlunos.
+           file status is wk-fs-arq1.
 
-           select arqNotas assign to "arqAlunosNotas.txt"
+           select arq2 assign to "arq2.txt"
            organization is line sequential
            access mode is sequential
-           file status is wk-fs-arqNotas.
+           file status is wk-fs-arq2.
 
-           select arqBoletin assign to "arqBoletin.txt"
+           select arqResul assign to "arqResul.txt"
            organization is line sequential
            access mode is sequential
-           file status is wk-fs-arqBoletin.
+           file status is wk-fs-arqResul.
+
+           select sortArq1 assign to "SortArq1.txt"
+           sort status is wk-ss-arq1.
+
+           select sortArq2 assign to "SortArq2.txt"
+           sort status is wk-ss-arq2.
 
 
 
@@ -43,62 +49,64 @@
 
       *>----Variaveis de arquivos
        file section.
-       fd arqAlunos.
-       01  fd-aluno.
-           05  fd-aluno-matricula                    pic  x(10).
-           05  fd-aluno-nome                         pic  x(25).
-           05  fd-aluno-serie                        pic  9(02).
-           05  fd-aluno-cpf                          pic  x(14).
+       fd arq1.
+       01  fd-arq1.
+           05  fd-1-id                                pic  x(03).
+           05  fd-1-dados                             pic  x(04).
 
-       fd arqNotas.
-       01  fd-notas.
-           05 fd-notas-matricula                     pic  x(10).
-           05 fd-notas-disciplina                    pic  x(04).
-           05 fd-notas-notas.
-              10 fd-notas-nota occurs 15             pic  9(02)v99.
+       fd arq2.
+       01  fd-arq2.
+           05  fd-2-id                                pic  x(03).
+           05  fd-2-dados                             pic  x(04).
 
-       fd arqBoletin.
-       01  fd-boletin.
-           05 fd-boletin-matricula                   pic  x(10).
-           05 fd-boletin-nome                        pic  x(25).
-           05 fd-boletin-serie                       pic  9(02).
-           05 fd-boletin-disciplina                  pic  x(04).
-           05 fd-boletin-notas.
-              10 fd-boletin-nota occurs 15           pic  9(02)v99.
-           05 fd-boletin-media                       pic  9(02)v99.
+       fd arqResul.
+       01  fd-arqResul.
+           05  fd-r-id                                pic  x(03).
+           05  fd-r-dados                             pic  x(04).
+
+       sd sortArq1.
+       01  sd-arq1.
+           05  sd-1-id                                pic  x(03).
+           05  sd-1-dados                             pic  x(04).
+
+       sd sortArq2.
+       01  sd-arq2.
+           05  sd-2-id                                pic  x(03).
+           05  sd-2-dados                             pic  x(04).
+
 
       *>----Variaveis de trabalho
        working-storage section.
 
       *>     File Status
-       77  wk-fs-arqAlunos                            pic x(02).
+       77  wk-fs-arq1                                 pic x(02).
+           88  wk-fs-1-ok                             value "00".
+           88  wk-eof-1                               value "10".
 
-       77  wk-fs-arqNotas                             pic x(02).
+       77  wk-fs-arq2                                 pic x(02).
+           88  wk-fs-2-ok                             value "00".
+           88  wk-eof-2                               value "10".
 
-       77  wk-fs-arqBoletin                           pic x(02).
 
-      *>   Variaveis de Trabalho dos arquivos
+       77  wk-fs-arqResul                             pic x(02).
+           88  wk-fs-r-ok                             value "00".
 
-       01  wk-aluno.
-           05  wk-aluno-matricula                    pic  x(10).
-           05  wk-aluno-nome                         pic  x(25).
-           05  wk-aluno-serie                        pic  9(02).
-           05  wk-aluno-cpf                          pic  x(12).
+       77  wk-ss-arq1                                 pic x(02).
+           88  wk-ss-1-ok                             value "00".
 
-      *>   Subscritores/Indexadores
-       01  wk-ind.
-           05  wk-i-nota                             pic 9(02).
+       77  wk-ss-arq2                                 pic x(02).
+           88  wk-ss-2-ok                             value "00".
+
 
       *>   Estatisticas
-       77  wk-qtd-alunos-lidos                       pic 9(06) comp.
-       77  wk-qtd-notas-lidos                        pic 9(06) comp.
+       77  wk-qtd-arq1                                pic 9(06) value 0.
+       77  wk-qtd-arq2                                pic 9(06) value 0.
+       77  wk-qtd-arqResul                            pic 9(06) value 0.
+
 
       *>   Mensagem de erro
        77  wk-msn                                    pic x(60).
 
-      *>   Variaveis auxiliares
-       77  wk-sum-notas                              pic 9(03)v99.
-       77  wk-media-notas                            pic 9(02)v99.
 
       *>----Variaveis para comunicação entre programas
        linkage section.
@@ -110,10 +118,9 @@
       *>Declaração do corpo do programa
        procedure division.
 
-
-
            perform a-inicializa.
-           perform b-processa.
+        *> perform b-processa. *> Algoritmo Balance Line Intersecção
+           perform c-processa. *> Algoritmo Balance Line União
            perform z-finaliza.
 
 
@@ -123,9 +130,37 @@
        a-inicializa section.
        a-inicializa-a.
 
-           open input arqAlunos
-           if wk-fs-arqAlunos not equal "00" then
-              string "Erro abertura Arquivo arqAlunos: " wk-fs-arqAlunos
+      *>    ordenando os arquivos de entrada
+           sort sortArq1
+             on ascending key sd-1-id
+                using arq1
+               giving arq1.
+
+           if  not wk-ss-1-ok then
+              string "Erro ao ordenar arq1: " wk-ss-arq1
+                      delimited by size
+                into wk-msn
+              end-string
+              perform z-finaliza-erro
+           end-if
+      *>
+           sort sortArq2
+             on ascending key sd-2-id
+                using arq2
+               giving arq2.
+
+           if  not wk-ss-2-ok then
+              string "Erro ao ordenar arq2: " wk-ss-arq2
+                      delimited by size
+                into wk-msn
+              end-string
+              perform z-finaliza-erro
+           end-if
+
+
+           open input arq1
+           if not wk-fs-1-ok then
+              string "Erro abertura Arquivo arq1: " wk-fs-arq1
                       delimited by size
                 into wk-msn
               end-string
@@ -133,9 +168,9 @@
               perform z-finaliza-erro
            end-if
 
-           open input arqNotas
-           if wk-fs-arqNotas not equal "00" then
-              string "Erro abertura Arquivo arqNotas: " wk-fs-arqNotas
+           open input arq2
+           if not wk-fs-2-ok then
+              string "Erro abertura Arquivo arq2: " wk-fs-arq2
                       delimited by size
                 into wk-msn
               end-string
@@ -143,9 +178,9 @@
               perform z-finaliza-erro
            end-if
 
-           open output arqBoletin
-           if wk-fs-arqBoletin not equal "00" then
-              string "Erro abertura Arquivo arqBoletin: " wk-fs-arqBoletin
+           open output arqResul
+           if not wk-fs-r-ok then
+              string "Erro abertura Arquivo arqResul: " wk-fs-arqResul
                       delimited by size
                 into wk-msn
               end-string
@@ -160,29 +195,28 @@
 
       *>*****************************************************************
       *>   Procedimento Principal
+      *>   - Algoritmo Balance line Intersecção
       *>*****************************************************************
        b-processa section.
        b-processa-a.
 
-           perform ba-ler-aluno
-           perform bb-ler-notas
+           perform ba-ler-arq1
+           perform ba-ler-arq2
 
-           perform until wk-fs-arqAlunos  equal "10"
-                     and wk-fs-arqNotas   equal "10"
+           perform until wk-eof-1
+                     and wk-eof-2
 
               evaluate true
-                 when fd-aluno-matricula equal fd-notas-matricula
-                    perform bc-gravar-boletin
-                    perform ba-ler-aluno
-                    perform bb-ler-notas
+                 when fd-1-id equal fd-2-id
+                    perform bc-gravar-resul
+                    perform ba-ler-arq1
+                    perform ba-ler-arq2
 
-                 when fd-aluno-matricula less than fd-notas-matricula
-                    perform ba-ler-aluno
+                 when fd-1-id less than fd-2-id
+                    perform ba-ler-arq1
 
-                 when fd-aluno-matricula greater than fd-notas-matricula
-                    perform bb-ler-notas
-
-
+                 when fd-1-id greater than fd-2-id
+                    perform ba-ler-arq2
               end-evaluate
 
            end-perform
@@ -193,102 +227,117 @@
 
 
       *>*****************************************************************
-      *>   Leitura do arquivo arqAluno
+      *>   Procedimento Principal
+      *>   - Algoritmo Balance line Uniao
       *>*****************************************************************
-       ba-ler-aluno section.
-       ba-ler-aluno-a.
+       c-processa section.
+       c-processa-a.
 
-           read arqAlunos
+           perform ba-ler-arq1
+           perform ba-ler-arq2
+
+           perform until wk-eof-1
+                     and wk-eof-2
+
+              evaluate true
+                 when fd-1-id equal fd-2-id
+                    move fd-arq2  to  fd-arqResul
+                    perform bc-gravar-resul
+                    perform ba-ler-arq1
+                    perform ba-ler-arq2
+
+                 when fd-1-id less than fd-2-id
+                    move fd-arq1  to  fd-arqResul
+                    perform bc-gravar-resul
+                    perform ba-ler-arq1
+
+                 when fd-1-id greater than fd-2-id
+                    move fd-arq2  to  fd-arqResul
+                    perform bc-gravar-resul
+                    perform ba-ler-arq2
+              end-evaluate
+
+           end-perform
+
+           .
+       c-processa-z.
+           exit.
+
+
+      *>*****************************************************************
+      *>   Leitura do arquivo arq1
+      *>*****************************************************************
+       ba-ler-arq1 section.
+       ba-ler-arq1-a.
+
+           read arq1
              at end
-                move "10"            to    wk-fs-arqAlunos
-                move high-values     to    fd-aluno-matricula
+                set wk-eof-1         to    true
+                move high-values     to    fd-1-id
              not at end
-                if   wk-fs-arqAlunos  not equal "00"
-                and  wk-fs-arqAlunos  not equal "10"  then
+                if wk-fs-1-ok then
+                   add 1 to wk-qtd-arq1
+                else
                    move spaces       to    wk-msn
-                   string "Erro Leitura arquivo arqAlunos, File Status: "
-                           wk-fs-arqAlunos   delimited by size
+                   string "Erro Leitura arquivo arq1, File Status: "
+                           wk-fs-arq1   delimited by size
                      into wk-msn
                    end-string
                    perform  z-finaliza-erro
                 end-if
-
-                if wk-fs-arqAlunos equal "00" then
-                   add 1 to wk-qtd-alunos-lidos
-                end-if
            end-read
 
            .
-       ba-ler-aluno-z.
+       ba-ler-arq1-z.
            exit.
 
       *>*****************************************************************
-      *>   Leitura do arquivo arqNotas
+      *>   Leitura do arquivo arq2
       *>*****************************************************************
-       bb-ler-notas section.
-       bb-ler-notas-a.
+       ba-ler-arq2 section.
+       ba-ler-arq2-a.
 
-           read arqNotas
+           read arq2
              at end
-                move "10"            to    wk-fs-arqNotas
-                move high-values     to    fd-notas-matricula
+                set wk-eof-2         to    true
+                move high-values     to    fd-2-id
              not at end
-                if   wk-fs-arqNotas  not equal "00"
-                and  wk-fs-arqNotas  not equal "10"  then
+                if wk-fs-2-ok then
+                   add 1 to wk-qtd-arq2
+                else
                    move spaces       to    wk-msn
-                   string "Erro Leitura arquivo arqNotas, File Status: "
-                           wk-fs-arqNotas   delimited by size
+                   string "Erro Leitura arquivo arq2, File Status: "
+                           wk-fs-arq2   delimited by size
                      into wk-msn
                    end-string
                    perform  z-finaliza-erro
                 end-if
-
-                if wk-fs-arqNotas equal "00" then
-                   add 1 to wk-qtd-notas-lidos
-                end-if
            end-read
 
            .
-       bb-ler-notas-z.
+       ba-ler-arq2-z.
            exit.
 
       *>*****************************************************************
       *>   Gravar Arquivo Boletin
       *>*****************************************************************
-       bc-gravar-boletin section.
-       bc-gravar-boletin-a.
-           move fd-aluno-matricula     to      fd-boletin-matricula
-           move fd-aluno-nome          to      fd-boletin-nome
-           move fd-aluno-serie         to      fd-boletin-serie
-           move fd-notas-disciplina    to      fd-boletin-disciplina
-           move fd-notas-notas         to      fd-boletin-notas
+       bc-gravar-resul section.
+       bc-gravar-resul-a.
 
-           move zero                   to      wk-sum-notas
-           perform varying wk-i-nota from 1 by 1 until wk-i-nota > 15
-                          or fd-notas-nota(wk-i-nota) = 99,99
-              add fd-notas-nota(wk-i-nota)  to   wk-sum-notas
-           end-perform
-           compute wk-media-notas  =  wk-sum-notas/(wk-i-nota - 1)
-
-
-           move wk-media-notas         to      fd-boletin-media
-
-           write fd-boletin
-           if   wk-fs-arqNotas  not equal "00"  then
-
+           write fd-arqResul
+           if wk-fs-r-ok  then
+              add  1            to    wk-qtd-arqResul
+           else
               move spaces       to    wk-msn
-              string "Erro gravacao arquivo arqBoletin, File Status: "
-                      wk-fs-arqBoletin   delimited by size
+              string "Erro gravacao arquivo arqResul, File Status: "
+                      wk-fs-arqResul   delimited by size
                 into wk-msn
               end-string
               perform  z-finaliza-erro
            end-if
 
-
-
-
            .
-       bc-gravar-boletin-z.
+       bc-gravar-resul-z.
            exit.
 
 
@@ -316,11 +365,16 @@
        z-finaliza section.
        z-finaliza-a.
            display erase
+           display "Registros Lidos Arq1: " wk-qtd-arq1
+           display "Registros Lidos Arq2: " wk-qtd-arq2
+           display "Registros gravados  ArqResul: " wk-qtd-arqResul
+
+
            display "Finalizando Programa..."
 
-           close arqAlunos
-           if wk-fs-arqAlunos not equal "00" then
-              string "Erro fechamento Arquivo arqAlunos: " wk-fs-arqAlunos
+           close arq1
+           if not wk-fs-1-ok  then
+              string "Erro fechamento Arquivo arq1: " wk-fs-arq1
                       delimited by size
                 into wk-msn
               end-string
@@ -328,9 +382,9 @@
               perform z-finaliza-erro
            end-if
 
-           close arqNotas
-           if wk-fs-arqNotas not equal "00" then
-              string "Erro fechamento Arquivo arqNotas: " wk-fs-arqNotas
+           close arq2
+           if not wk-fs-2-ok  then
+              string "Erro fechamento Arquivo arq2: " wk-fs-arq2
                       delimited by size
                 into wk-msn
               end-string
@@ -338,9 +392,9 @@
               perform z-finaliza-erro
            end-if
 
-           close arqBoletin
-           if wk-fs-arqBoletin not equal "00" then
-              string "Erro fechamento Arquivo arqBoletin: " wk-fs-arqBoletin
+           close arqResul
+           if not wk-fs-r-ok  then
+              string "Erro fechamento Arquivo arqResul: " wk-fs-arqResul
                       delimited by size
                 into wk-msn
               end-string
