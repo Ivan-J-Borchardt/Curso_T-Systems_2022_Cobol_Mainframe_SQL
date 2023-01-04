@@ -119,7 +119,7 @@
        procedure division.
 
            perform a-inicializa.
-        *> perform b-processa. *> Algoritmo Balance Line Intersecção
+        *>   perform b-processa. *> Algoritmo Balance Line Intersecção
            perform c-processa. *> Algoritmo Balance Line União
            perform z-finaliza.
 
@@ -208,6 +208,7 @@
 
               evaluate true
                  when fd-1-id equal fd-2-id
+                    move fd-arq2    to    fd-arqResul
                     perform bc-gravar-resul
                     perform ba-ler-arq1
                     perform ba-ler-arq2
@@ -218,6 +219,8 @@
                  when fd-1-id greater than fd-2-id
                     perform ba-ler-arq2
               end-evaluate
+
+
 
            end-perform
 
