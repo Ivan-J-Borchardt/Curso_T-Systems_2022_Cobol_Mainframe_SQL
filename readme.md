@@ -11,14 +11,34 @@
 "Sorte é o que acontece quando a preparação encontra a oportunidade" (Sêneca)
 
 ---
-## Backlog 
+## Avaliações
 
-#### Deadline: 2022.10.24
+#### **Concluído**
+- Prova 1 
+- Prova 2 
+- Prova 3 
+- Recuperação Prova 1 
+
+#### **Pendente** 
+
+
+- Desafio da Pizza 
 - Desafio do algoritmo de ordenacao pelo método insert-sort.
+- Desafio Arq. Sequenciais - Tema Livre
+- Desafio Arq. Indexados - Temperatura Histórica 
+- Desafio Cifra de César
+- Projeto SRS 
 
-- Refazer a prova, agora utilizando todas as tecnicas que estudamos até o momento (Programação estruturada, 
-formatação de valores e Strings, validação dos dados informados pelo usuario, etc).
+#### Já avaliados anteriormente, mas que passarão por nova avaliação em breve
+- Understanding Document (Pontos avaliados: qualidade do documento, desde organização, clareza no texto, acertividade, completude e precisão da informação documentada). 
+- Resolução dos exercícios propostos (Itens avaliados: frequencia e pontualidade nas entregas, acertividade e qualidade nas resoluções, etc).
+- Aspectos individuais e comportamentais: Comprometimento, Interesse, Interação em aula, Qualidade Técnica, Ritmo de desenvolvimento pessoal, Capacidade Técnica etc. 
 
+**Por Favor concluír com urgência, tentem caprichar ao máximo pois os resultados das avaliações serão compilados no Dossiê...**  
+
+**Lembre de subir cada projeto para um repositório no Bitbucket**  
+**Dúvidas ou precisa de ajuda? - vcs já sabem... ;)**  
+  
 ---
 
 ## Aulas 
