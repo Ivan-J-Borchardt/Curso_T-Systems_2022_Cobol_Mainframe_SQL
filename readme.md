@@ -592,7 +592,71 @@
 
 ## Links úteis 
 
- 
+### História da computação + como o computador funciona...    
+
+    #Entendendo o sistema binário 
+        https://www.youtube.com/watch?v=YgSjnLXM2Ts
+
+    #SagaDosComputadores Ep.1 
+        https://www.youtube.com/watch?v=xajcV4lwY3Q
+
+    #SagaDosComputadores Ep.2 
+        https://www.youtube.com/watch?v=uQPiyxoCk9E
+
+    #SagaDosComputadores Ep.3
+        https://www.youtube.com/watch?v=c5lugpYQLD8
+
+    #SagaDosComputadores Ep.4 
+        https://www.youtube.com/watch?v=DhodsmIm3LE
+
+    #SagaDosComputadores Ep.5 
+        https://www.youtube.com/watch?v=sS7r7a-6SO0
+
+    #SagaDosComputadores Ep.6
+        https://www.youtube.com/watch?v=uByQnP5FsVY
+
+    #SagaDosComputadores Ep.7
+        https://www.youtube.com/watch?v=rS1SgcjYbIE
+
+    #SagaDosComputadores Ep.8
+        https://www.youtube.com/watch?v=22nd99SLgNA
+
+    #SagaDosComputadores Ep.9
+        https://www.youtube.com/watch?v=sfm653IPXeM
+
+    #SagaDosComputadores Ep.10
+        https://www.youtube.com/watch?v=vdyEt6Bbmes
+
+### Lógica de Programação 
+- Curso online gratuito   
+    https://www.cursoemvideo.com/
+
+### Cobol 
+ - Tutoriais Cobol   
+    https://www.ibmmainframer.com/cobol-tutorial/cobol-introduction/  
+    https://www.tutorialbrain.com/mainframe/cobol_home/  
+    https://docplayer.com.br/53728416-Cobol-db2-cics-prof-maromo-aula-5.html  
+    https://www.cadcobol.com.br/menuprin.htm  
+
+### Banco de dados 
+
+- Ferramentas Online para Modelagem de Bases de dados / Diagramas / Fluxogramas  
+    https://erdplus.com/  
+    www.draw.io  
+    www.lucidchart.com  
+	www.canva.com  
+
+
+- Tutorial SQL   
+    https://www.w3schools.com/sql/default.asp  
+    https://www.tutorialspoint.com/sqlite/index.htm   
+    https://www.db2tutorial.com/   
+
+- Simulador de Banco Online para estudos   
+    https://sqliteonline.com/  
+
+### Comunicação & Organização do Curso 
+
 [![WhatsApp](https://img.shields.io/badge/Grupo-WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/EBs5BBL2dJM1wA9lQSrtuZ)
 
 - Planilha Entrega de Exercícios:   
