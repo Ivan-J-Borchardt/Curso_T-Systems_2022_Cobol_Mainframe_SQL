@@ -114,3 +114,8 @@ https://www.youtube.com/watch?v=92eSz2X0AlU
 ## Sérgio Tomio conta como surgiu o Entra21
 
 https://www.youtube.com/watch?v=v8YbrZb4DfY
+
+
+## Albert Einstein DUBLADO DOCUMENTÁRIO COMPLETO S/ CORTES
+
+https://www.youtube.com/watch?v=UnSA27a00To 
