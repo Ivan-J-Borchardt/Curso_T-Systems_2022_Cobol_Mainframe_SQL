@@ -57,7 +57,7 @@ create table medico_tel(
   ddi char(2), 
   ddd char(3), 
   numero varchar(10), 
-  cod_tel int not null references medico(cod)
+  cod_med int not null references medico(cod)
 );
 
 create table parto(
