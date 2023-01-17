@@ -1,4 +1,3 @@
-
 create table especialidade(
   cod int primary key, 
   especialidade varchar(35) 
@@ -32,7 +31,7 @@ create table endereco(
 create table mae(
   cod int PRIMARY key, 
   nome VARCHAR(35) not null, 
-  cpf int, --tipo incorreto de dado...
+  cpf char(14), 
   data_nasc date,
   cod_end int not null references endereco(cod)
 );
@@ -75,6 +74,7 @@ create table parto(
 create table bebe(
   cod int PRIMARY key, 
   nome varchar(35), 
+  sexo char(1) check(sexo in('m', 'f')),
   altura int, 
   peso REAL, 
  -- data_nasc date, 
@@ -97,5 +97,5 @@ create table medico_parto(
    cod_parto int references parto(cod)
 );
 
-alter table mae drop column cpf; 
-alter table mae add column cpf char(14) unique not null; 
+--alter table mae drop column cpf; 
+--alter table mae add column cpf char(14) unique not null;
