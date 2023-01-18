@@ -54,7 +54,7 @@ select *
         data_nasc as NAscimento
    from mae;
 
--- Join 
+-- Join (consultas envolvendo mais de uma tabela)
 select mae.cod, 
        mae.nome, 
        endereco.cep, 
@@ -84,3 +84,36 @@ select mae.cod,
     and data_nasc BETWEEN '1990-01-01' and '1999.12.31'
     order by data_nasc;  
   
+  -- Calculos aritméticos 
+
+  select * from bebe;
+  select (peso * 100) as "gramas" from bebe;
+
+
+
+  -- Trabalhando com datas 
+  select CURRENT_timestamp; 
+  select current_time; 
+  SELECT current_date; 
+
+  SELECT EXTRACT(YEAR from CURRENT_DATE) - EXTRACT(YEAR FROM data_nasc) from mae;
+
+
+
+  -- Funções de agregação (COUNT, SUM, MIN, MAX, AVG)
+
+   select COUNT(*) from mae; 
+   select count(nome) from mae;
+
+   select sum(peso) from bebe where sexo = 'f'; 
+   select avg(peso) from bebe where sexo = 'f'; 
+   select  min(peso) from bebe; 
+
+
+  -- Group By 
+
+   select cod_mae, count(cod_mae) 
+     from bebe
+     group by cod_mae;
+
+  -- Concatenando os resultados (muito usado para gerar scripts com os dados já cadastrados...)
