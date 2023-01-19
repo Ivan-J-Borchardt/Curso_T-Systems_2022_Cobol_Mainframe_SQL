@@ -139,7 +139,39 @@ select medico.nome,
 ~~~
 
 10. Descubra se na tabela de bebes há irmaos cadastrados (relacione os dados dos irmaos). 
-11. Gere um relatório que mostre as maes que tiveram bebes gêmeos. 
+~~~
+ select bebe.cod, 
+        bebe.nome, 
+        bebe.sexo, 
+        bebe.altura, 
+        parto.data_parto as data_nasc, 
+        mae.nome
+   from bebe, mae, parto
+  where bebe.cod_parto = parto.cod
+    and parto.cod_mae = mae.cod
+    and bebe.cod_mae in (select cod_mae
+                           from bebe
+                          group by cod_mae
+                          HAVING  count(*) > 1)
+    order by mae.nome; 
+~~~
+
+11. Gere um relatório que mostre as maes que tiveram bebes gêmeos.
+~~~
+  select mae.nome 
+   from mae
+  where cod in (select bebe.cod_mae
+                  from bebe, mae, parto
+                 where bebe.cod_parto = parto.cod
+                   and parto.cod_mae = mae.cod
+                   and bebe.cod_mae in (select cod_mae
+                                          from bebe
+                                        group by cod_mae
+                                        HAVING  count(*) > 1)
+                  group by bebe.cod_mae
+                  HAVING max(parto.data_parto) = min(parto.data_parto)); 
+~~~
+
 12. Busque o telefone do(s) médico(s) Obstetras que realizaram o parto do Bebe cuja mae tem o CPF '002.001.002-13'.
 ~~~
 -- 12
@@ -203,15 +235,57 @@ SELECT bebe.cod as cod_bebe,
 ~~~
 
 15. Crie um relatório que apresente a quantidade de bebês meninas. 
+~~~
+select count(*) from bebe where sexo = 'f'; 
+~~~
+
 16. Busque o bebê mais alto. 
+~~~
+~~~
 17. Busque o bebê com o menor peso. 
+~~~
+
+~~~
 18. Precisa se saber quantos partos o médico cujo crm é '234E22' realizou. 
+~~~
+select count(*)
+ from parto, medico, medico_parto
+where medico_parto.cod_parto = parto.cod
+  and medico_parto.cod_medico = medico.cod
+  and medico.crm = '234E22';
+~~~
 19. Gere um relatório contendo a quantidade de partos que o médico de crm '234E22' realizou por ano. Ordene os resultados pela data em ordem decrescente. 
+~~~
+select EXTRACT(YEAR FROM parto.data_parto), count(*) 
+ from parto, medico, medico_parto
+where medico_parto.cod_parto = parto.cod
+  and medico_parto.cod_medico = medico.cod
+  and medico.crm = '234E22'
+  group by EXTRACT(YEAR FROM parto.data_parto); 
+~~~
 
 20. A clinica está no limite de sua capacidade de atendimento, por isso o comite executivo decidiu que irá abrir uma filial na cidade de onde vem o maior número de mães. Gere um relatório que apresente a quantidade de mães por cidade. 
-21. Crie um relatório que apresente a média geral de peso dos bebês. 
-22. Crie um relatório que apresente a média de peso dos bebês agrupado por ano. 
+~~~
+select  cidade.cidade, count(cidade.cidade)
+ from mae, cidade, endereco
+ where mae.cod_end = endereco.cod
+   and endereco.cod_cidade = cidade.cod
+ group by cidade.cidade; 
+~~~
 
-23. Nosso banco de dados possui um problema grave de normalizacao. Há duas tabelas de telefone o quepode levar a redundancia de dados. Analise a situacao e proponha uma solucao. 
+21. Crie um relatório que apresente a média geral de peso dos bebês. 
+~~~
+select avg(peso) as media from bebe;   
+~~~
+
+22. Crie um relatório que apresente a média de peso dos bebês agrupado por ano. 
+~~~
+select avg(peso) as media 
+  from bebe, parto
+  where bebe.cod_parto = parto.cod
+  group by EXTRACT(YEAR FROM parto.data_parto);
+~~~
+
+23. Nosso banco de dados possui um problema grave de normalizacao. Há duas tabelas de telefone o que pode levar a redundancia de dados. Analise a situacao e proponha uma solucao. 
 24. O departamento de BI precisa de uma tabela que mescle os dados dos bebes e maes para uma analise complexa. 
     Crie uma query para criar um script para  inserir os dados nessa nova tabela (selecionando os dados das tabelas mae e bebe). 

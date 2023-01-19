@@ -99,3 +99,27 @@ create table medico_parto(
 
 --alter table mae drop column cpf; 
 --alter table mae add column cpf char(14) unique not null;
+
+-- Gerando chave primaria de forma automática (serial, autoincrement, sequence )
+-- Exemplo para sqlite 
+CREATE TABLE people (
+   person_id INTEGER PRIMARY KEY AUTOINCREMENT,
+   first_name text NOT NULL,
+   last_name text NOT NULL
+);
+
+
+-- Exemplo Postgresql
+create table frutas(
+    cod serial PRIMARY key, 
+    nome varchar(35),
+    preco real
+);
+
+
+insert into frutas (nome, preco) values ('pessego', 4.5); 
+insert into frutas (nome, preco) values ('morango', 6.5); 
+insert into frutas (nome, preco) values ('abacate', 2.3); 
+insert into frutas (nome, preco) values ('jabuticaba', 8.80); 
+insert into frutas (nome, preco) values ('abacaxi', 9.80); 
+select * from frutas;

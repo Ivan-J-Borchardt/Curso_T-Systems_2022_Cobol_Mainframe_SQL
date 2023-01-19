@@ -82,15 +82,15 @@
                   nm_agente char(50),
                   id_agencia char(20))
            END-EXEC
-          EXEC SQL
+           EXEC SQL
              commit transaction
-          END-EXEC
-          if  sqlcode not = 0
+           END-EXEC
+           if  sqlcode not = 0
               display "Erro: commit "
               display sqlcode
               display sqlerrmc
               stop run
-          end-if
+           end-if
            .
        1001-saida.
        1001.
