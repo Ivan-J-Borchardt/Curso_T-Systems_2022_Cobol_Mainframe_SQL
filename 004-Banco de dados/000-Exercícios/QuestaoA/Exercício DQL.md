@@ -212,3 +212,6 @@ SELECT bebe.cod as cod_bebe,
 21. Crie um relatório que apresente a média geral de peso dos bebês. 
 22. Crie um relatório que apresente a média de peso dos bebês agrupado por ano. 
 
+23. Nosso banco de dados possui um problema grave de normalizacao. Há duas tabelas de telefone o quepode levar a redundancia de dados. Analise a situacao e proponha uma solucao. 
+24. O departamento de BI precisa de uma tabela que mescle os dados dos bebes e maes para uma analise complexa. 
+    Crie uma query para criar um script para  inserir os dados nessa nova tabela (selecionando os dados das tabelas mae e bebe). 
