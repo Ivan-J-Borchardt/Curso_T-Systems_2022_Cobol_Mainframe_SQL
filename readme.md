@@ -537,49 +537,78 @@
 
 ### Aula 84 - 2023.01.12 - 326h
 - SQL - DDL 
+    - Tipos de dados 
+    - Create table 
+    - Drop Table 
+    - Alter Table 
+    - constrains (not null, unique, check, primary and foreign key)
+    - Conceito de integridade referencial 
+- Exercícios 
 
 ### Aula 85 - 2023.01.13 - 330h
-- SQL - DML 
+- SQL - DML
+    - Insert 
+    - Update
+    - Delete 
+    - Cláusula where 
+- Exercícios 
 
 ### Aula 86 - 2023.01.16 - 334h
-- SQL - DQL e Cláusulas 
+- SQL - DQL 
+    - Operadores lógicos 
+    - Operadores Relacionais 
+    - Alias coluna
+- Exercícios 
 
 ### Aula 87 - 2023.01.17 - 338h
-- SQL - DQL e Cláusulas 
-- Operadores lógicos 
-- Operadores Relacionais 
-
+- SQL - DQL
+    - Joins 
+    - Order By asc, desc
+- Exercícios 
 ### Aula 88 - 2023.01.18 - 342h
-- SQL - DCL e DTL 
-- Respiro para exercícios 
+- Funções de Agregação (AVG, COUNT, SUM, MAX, MIN)
+- Group By
+- Trabalando com data e hora 
+- Cálculos aritméticos
+
+- Exercícios 
 
 ### Aula 89 - 2023.01.19 - 346h
-- Respiro para exercícios 
-
-### Aula 90 - 2023.01.20 - 350h
-- Respiro para exercícios 
-
-### Aula 91 - 2023.01.23 - 354h
+- Alias de tabela 
+- Having 
+- SQL - DCL
+    - Commit 
+    - Rollback
+- DDL 
+    - Autoincrement, Serial, sequence 
 - Banco de dados Relacionais no Cobol 
 - Comando Exec SQL 
+- SQL Code 
+- Exercícios  
+
+### Aula 90 - 2023.01.20 - 350h
+- Exercícios 
+
+### Aula 91 - 2023.01.23 - 354h
+- Exercícios 
+- Views
 
 ### Aula 92 - 2023.01.24 - 358h
-- SQL Code 
-- Exemplo Cobol 
 - Exercícios 
 
 ### Aula 93 - 2023.01.25 - 362h
-- Funções de Agregação (AVG, COUNT, SUM, MAX, MIN)
+- Exercícios
 
 ### Aula 94 - 2023.01.26 - 366h
-- Respiro para exercícios
+- Exercícios
+- Indices
 
 ### Aula 95 - 2023.01.27 - 370h
-- Respiro para exercícios
+- Exercícios
+- Conceito de ambiente multi-usuário, Lock e Deadlock 
 
 ### Aula 96 - 2023.01.30 - 374h
-- alias coluna
-- alias tabela 
+- Concatenando os resultados da consulta 
 - sub-select 
 
 ### Aula 97 - 2023.01.31 - 378h
