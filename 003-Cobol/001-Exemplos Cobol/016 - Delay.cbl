@@ -58,9 +58,9 @@
       *  Delay - serve para dar um pause de n segundos no programa
       ******************************************************************
        U-delay section.
-
+      *              17013544
       *    wk-tempo-delay = 100 -> 1 segundo
-           move 1000 to wk-tempo-delay
+           move 0100 to wk-tempo-delay
            move 0    to wk-tempo-delta
            accept wk-hora-inicio-delay from time
            perform until wk-tempo-delta >= wk-tempo-delay
