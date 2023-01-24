@@ -661,11 +661,14 @@
     https://www.cursoemvideo.com/
 
 ### Cobol 
- - Tutoriais Cobol   
+- Tutoriais Cobol   
     https://www.ibmmainframer.com/cobol-tutorial/cobol-introduction/  
     https://www.tutorialbrain.com/mainframe/cobol_home/  
     https://docplayer.com.br/53728416-Cobol-db2-cics-prof-maromo-aula-5.html  
     https://www.cadcobol.com.br/menuprin.htm  
+
+- Documentação Oficial da IBM para COBOL 
+    https://www.ibm.com/support/pages/enterprise-cobol-zos-documentation-library
 
 ### Banco de dados 
 
@@ -680,9 +683,14 @@
     https://www.w3schools.com/sql/default.asp  
     https://www.tutorialspoint.com/sqlite/index.htm   
     https://www.db2tutorial.com/   
+    https://www.ibmmainframer.com/db2-tutorial/
+
 
 - Simulador de Banco Online para estudos   
     https://sqliteonline.com/  
+
+- Documentação oficial do DB2 z/Os
+    https://www.ibm.com/docs/en/SSEPEK_11.0.0/pdf/db2z_11_apsgbook.pdf
 
 ### Comunicação & Organização do Curso 
 
