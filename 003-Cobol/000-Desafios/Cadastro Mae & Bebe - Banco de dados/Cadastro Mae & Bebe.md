@@ -27,7 +27,7 @@ Layout do Arquivo:
 ~~~
 
 - O programa deverá protocolar cada ação com cada registro de dados em um arquivo de saída. Ao final do protocolo deverá ser gerado um resumo com a sumarização das ações (Quantida de registros lidos, quantidade de registros inseridos no Banco e Quantidade de Registros alterados no Banco).  
-- Caso o Programa ABENDE por causa de algum erro, protocolar a mensagem de erro. 
+- Caso o Programa ABEND por causa de algum erro, protocolar a mensagem de erro. 
 
 ~~~
 Exemplo de protocolo: 
@@ -50,6 +50,15 @@ Programa Finalizado com Sucesso
 
 ~~~
 
+- O programa deverá ler um arquivo de parametros (Inicialização)
+- Implemente uma lógica de commit utilizando o parametro wk-qtd-commit
+
+~~~
+01 Parametros. 
+   05 wk-nome-Programa               pic x(08).
+   05 wk-numero-carto-parm           pic 9(02). 
+   05 wk-qtd-commit                  pic 9(04).                   
+~~~
 
 
 arq.csv  
