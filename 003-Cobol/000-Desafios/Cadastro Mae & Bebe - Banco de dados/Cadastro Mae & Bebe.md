@@ -1,4 +1,4 @@
-# Desafio: Sistema de cadastro com Bano de dados SQL 
+# Desafio: Sistema de cadastro com Banco de dados SQL 
 
 Crie um sistema para efetuar e gerenciar o cadastro de Maes, Bebes e Partos. Tome por base o MER em anexo. 
 
