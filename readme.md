@@ -692,6 +692,8 @@
 - Documentação oficial do DB2 z/Os
     https://www.ibm.com/docs/en/SSEPEK_11.0.0/pdf/db2z_11_apsgbook.pdf
 
+    https://www.ibm.com/docs/en/db2-for-zos/13?topic=codes-successful-execution-sql
+    
 ### Comunicação & Organização do Curso 
 
 [![WhatsApp](https://img.shields.io/badge/Grupo-WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/EBs5BBL2dJM1wA9lQSrtuZ)
