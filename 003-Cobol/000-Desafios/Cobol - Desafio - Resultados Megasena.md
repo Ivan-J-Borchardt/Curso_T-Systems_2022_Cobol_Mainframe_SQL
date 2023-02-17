@@ -26,7 +26,7 @@ Baixe todos os resultados dos sorteios da mega-sena e salve em um arquivo CSV. C
 ~~~
 	d. Os números apostados nunca foram sorteados: 
 ~~~    
-	Os números apostados nunca foram sorteados.
+	Aposta não Premiada.
 ~~~
 
 - Os resultados exibidos em tela devem ser salvos em um arquivo sequencial com o mesmo layout da tela. 
