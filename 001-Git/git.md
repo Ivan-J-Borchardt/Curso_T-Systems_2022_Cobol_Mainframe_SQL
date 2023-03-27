@@ -30,7 +30,10 @@ git config --local user.name "Your Name"
 Visualizar as configurações válidas para o projeto:  
   
 git config user.name
+  
+Erro SSL Certificate Problem:  
 
+git config --global http.sslbackend schannel  
 
 3. Inicializando um repositório 
 
