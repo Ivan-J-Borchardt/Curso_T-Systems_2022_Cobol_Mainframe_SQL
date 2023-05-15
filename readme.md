@@ -56,6 +56,7 @@
     #SagaDosComputadores Ep.6
         https://www.youtube.com/watch?v=uByQnP5FsVY
 
+
 ### Folga  - 2022.09.02
 - Feriado Fundação de Blumenau 
 

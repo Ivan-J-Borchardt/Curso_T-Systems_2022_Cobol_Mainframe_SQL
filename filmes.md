@@ -62,6 +62,24 @@ https://www.youtube.com/watch?v=JBostGKVv6A
 #SagaDosComputadores Ep.6
     https://www.youtube.com/watch?v=uByQnP5FsVY
 
+#SagaDosComputadores Ep.7
+    https://www.youtube.com/watch?v=rS1SgcjYbIE
+
+#SagaDosComputadores Ep.8
+    https://www.youtube.com/watch?v=22nd99SLgNA
+
+#SagaDosComputadores Ep.9
+    https://www.youtube.com/watch?v=sfm653IPXeM
+
+#SagaDosComputadores Ep.10
+    https://www.youtube.com/watch?v=vdyEt6Bbmes
+
+#Big Data, Segurança da Informação, Inteligencia Artificial
+    https://www.youtube.com/watch?app=desktop&v=VjgtiyTGzHk 
+
+#Entenda o Wi-Fi
+    https://www.youtube.com/watch?v=V2XW8nxNjcc
+     
 ---
 ---
 
